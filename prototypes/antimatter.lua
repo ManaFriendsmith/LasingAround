@@ -1,4 +1,5 @@
 local misc = require("__pf-functions__/misc")
+local item_sounds = require("__base__/prototypes/item_sounds")
 
 if (misc.difficulty < 3) or not mods["space-age"] then
     return

@@ -1,4 +1,5 @@
 local util = require("util")
+local item_sounds = require("__base__/prototypes/item_sounds")
 
 local lasermill_pipes = assembler2pipepictures()
 lasermill_pipes.south =
