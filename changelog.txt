@@ -1,0 +1,97 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+  Compatibility:
+    - Updated for compatibility with Factorio 2.0 and Space Age.
+  Features:
+    - Added new intermediate to Maximal mode with Space Age: cardinal grammeter, weird alien gizmo.
+    - Weird alien gizmos cannot be directly crafted, only obtained from scrap. They break down into lasers, holmium, and some other items.
+    - Added ways to craft lasers on Vulcanus and Gleba without access to helium. Only applies when using Any Planet Start; when playing normally you will need to import lasers from Nauvis or Fulgora.
+    - Added a new machine to Maximal mode when used with Space Age: the antiparticle decelerator.
+  Changes:
+    - Broke out prototype-manipulation functions into a separate mod, so I don't need to update every single mod whenever there is inevitably a small bug.
+    - Difficulty selection is now handled by a single option in pf-functions. The options are now Minimal (comparable to old easy mode), Moderate (comparable to old hard mode, some things are softened when used with Space Age to expedite getting off Nauvis), and Maximal (lots of extra middle fingers to you and your plans.)
+    - Merged helium lasers and carbon dioxide lasers into a single item. Removed empty amplifier tubes.
+    - Laser mill now has 2 input and 2 output fluidboxes.
+  Modding:
+    - Recipes now have separate lasermill_vanilla and lasermill_dlc fields. Same syntax as before, which one is considered depends on whether Space Age is installed.
+    - Removed "type" field in recipe laser mill data.
+    - Added remove_fluids_except field to laser mill data. Causes the laser mill recipe generator will remove all fluids from the generated copy except helium and the specified fluid.
+    - Added productivity_research field to laser mill data. Adds a bonus to the specified technology which boosts the productivity of the generated recipe.
+    - Specifying a negative helium cost will make the mod attempt to calculate an amount of helium proportionate to the recipe's cost. This will recursively look at the recipes of each ingredient (solids only). Most vanilla items will have a specified cost of -1; you can specify -2 for the helium cost to be double the calculated value, etc.
+    - This algorithm is not arbitrarily automagical. You can help it along by giving items a canonical_recipe, or items and fluids a canonical_cost.
+  Balancing:
+    - Buffed the laser mill. It has 60% productivity in vanilla and 100% productivity in Space Age. Helium consumption was roughly doubled but this is still more free products per unit of helium. In Space Age it can no longer make buildings other than pipes but can make every intermediate made in an assembler.
+    - Lots of minor recipe tweaks across the board.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+  Compatibility:
+    - Corrected a reference to a removed icon for compatibility with Lunar Landings.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Balancing:
+    - (LL) CO2 lasers need oxygen and solid fuel, instead of an absurd-to-import-to-the-moon amount of petroleum gas.
+    - (LL) Moon rock processing gives 2 -> 5 helium. Helium venting is unlocked when researching either method of getting helium.
+    - (LL) Polariton Laser crafts in a batch of 10 -> 20 and costs less astroflux per product.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Compatibility:
+    - Support for Lunar Landings added.
+  Features:
+    - Spectroscope recipe will never have the baffling placeholder ingredient of a pipe if no suitable glass item is found. Yes, this is a feature.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Bugfixes:
+    - (nickel) Alternate recipes for valve and gyroscope using micron-tolerance components now correctly accept productivity modules.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Compatibility:
+    - Added support for Icon Badges
+    - Laser mill recipe generation will now attempt to not overlap laser icon with Icon Badges. If the laser icon position is unspecified, and the IB icon position is top-left, it will now default to top right. For some recipes, this may still need manual adjustment.
+    - Icon Badges is now an optional dependency to solidify the load order.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Locale:
+    - Added Spanish locale by Rawkius.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+  Changes:
+    - (bzgas, SE) Renamed gas-to-methane alternate recipes from "methane reforming" to "methane distillation" for more accuracy.
+    - Replaced all references to "microtolerance" with "micron-tolerance." This is both a more widely used term and not the name of an engineering firm.
+  Balancing:
+    - Alternate gas reforming and methane distillation recipes can now use productivity modules (but only for helium.)
+  Locale:
+    - Consolidated all "productivity modules only boost the yield of helium" descriptions into a single locale key.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Changes:
+    - Renamed tech folder to technology.
+  Compatibility:
+    - (bzgas) Added versions of the gas-to-hydrogen and gas-to-methane recipes which yield helium.
+  Bugfixes:
+    - (bzgas) Fixed formaldehyde product advanced natural gas processing having a higher catalyst_amount than the actual amount of formaldehyde produced.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Compatibility:
+    - (K2) Added trackers to K2 lategame turrets and intergalactic transceiver.
+    - (K2) Added CO2 laser to laser artillery and advanced tech card.
+    - (K2) Added spectroscope to matter stabilizer.
+  Balancing:
+    - (K2) Helium cost of making iron gears in the laser mill is now always 1 per 2 gears regardless of whether or not K2 has bulkified the recipe.
+    - Helium yield from filtering is now dynamic based on mod configuration and ranges 10-16 per 50 oil. You will now get a bit more helium the more laser mill recipes you have enabled in mod settings. BZ noble metals reduces the benefit of enabling circuit recipes in the laser mill because the processing unit rework craters the demand for green circuits.
+    - Helium balancing is the thing I need the most feedback about. In general I want it to be possible to use the laser mill for some discretionary recipes from the moment it is unlocked, but to never be able to use it in every possible location without max prodmods and sacrificing spectroscopes. The strong effect of unlocking better modules and the vast number of possible mod combinations make this... complicated.
+  Changes:
+    - Renamed items folder to icons, like every other mod.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.

@@ -1,0 +1,10 @@
+{
+  "name": "LasingAround",
+  "version": "2.0.0",
+  "title": "Lasing Around",
+  "author": "planetfall",
+  "homepage": "",
+  "description": "Adds helium and laser-related intermediates, and a side-grade to assembling machines.",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacks", "? IfNickel", "? ThemTharHills", "? BrimStuff"]
+}

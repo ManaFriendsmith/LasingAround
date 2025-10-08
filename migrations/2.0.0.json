@@ -1,0 +1,18 @@
+{
+  "item":
+  [
+    ["helium-laser", "laser"],
+    ["carbon-dioxide-laser", "laser"]
+  ],
+  "recipe":
+  [
+    ["helium-laser", "laser"],
+    ["carbon-dioxide-laser", "laser"],
+    ["spectroscopic-helium-extraction", "spectroscopic-oil-filtration"]
+  ],
+  "technology":
+  [
+    ["microtolerance-manufacturing", "micron-tolerance-manufacturing"],
+    ["microtolerance-instruments", "micron-tolerance-instruments"]
+  ]
+}
