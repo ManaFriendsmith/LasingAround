@@ -239,8 +239,8 @@ if mods["space-age"] then
                     shift = {-8, -8}
                 }
             },
-            subgroup = "fulgora-processes",
-            order = "c",
+            subgroup = "agriculture-products",
+            order = "a[organic-products]-g[bioflux]-alt",
             category = "organic",
             ingredients = {
                 {type="item", name="yumako-mash", amount=15},
