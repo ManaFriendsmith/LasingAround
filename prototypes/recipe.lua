@@ -834,11 +834,14 @@ if mods["space-age"] then
                 subgroup = "original-dint",
                 order = "za", --planning!
                 ingredients = {
-                    {type="item", name="mutagenic-sludge", amount=5},
-                    {type="item", name="weird-alien-gizmo", amount=1}
+                    {type="item", name="mutagenic-sludge", amount=1},
+                    {type="item", name="weird-alien-gizmo", amount=1, ignored_by_stats=1}
                 },
                 results = {
+                    {type="item", name="weird-alien-gizmo", amount=1, probability=0.8, ignored_by_stats=1}
                 },
+                show_amount_in_title = false,
+                maximum_productivity = 0,
                 energy_required = 3,
                 enabled = false
             },
@@ -856,6 +859,7 @@ if mods["space-age"] then
                 },
                 results = {
                 },
+                maximum_productivity = 0,
                 energy_required = 5,
                 enabled = false
             },
