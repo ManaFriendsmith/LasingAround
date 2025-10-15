@@ -37,3 +37,4 @@ According to the Factorio terms of service mods may include assets derived from 
 The assets derived from Factorio assets in this mod are:
 - reference car (derived from car)
 - achievement graphic (derived from achievement and car)
+- laser mill working sound (derived from roboport and substation sounds)
