@@ -130,7 +130,7 @@ while next_keyframe <= #keyframes do
                 blasting = 6
                 table.insert(accents,
                 {
-                    sound = {filename = "__LasingAround__/sound/zap.ogg", volume = 0.4},
+                    sound = {filename = "__pf-sa-compat__/sound/zap.ogg", volume = 0.4},
                     frame = current_frame_index + 1, --the blasting begins next frame
                     audible_distance_modifier = 0.6
                 }
