@@ -68,6 +68,7 @@ if misc.difficulty == 3 then
 
     rm.AddIngredient("personal-roboport-mk2-equipment", "cardinal-grammeter", 10)
     rm.ReplaceIngredientProportional("mech-armor", "holmium-plate", "cardinal-grammeter", 0.1)
+    rm.ReplaceIngredientProportional("energy-shield-mk2-equipment", "processing-unit", "cardinal-grammeter", 1)
 end
 
 if data.raw.item["tracker"] then
@@ -86,6 +87,11 @@ if misc.difficulty == 3 then
     tm.AddPrerequisite("quantum-processor", "probability-manipulation")
     tm.AddPrerequisite("quantum-processor", mods["IfNickel"] and "geometry-abolition" or "laissez-faire-mathematics")
     rm.ReplaceIngredientProportional("quantum-processor", "processing-unit", "pulsing-newtronic-chip")
+
+    rm.ReplaceIngredientProportional("railgun-turret", "superconductor", "cardinal-grammeter", 0.1)
+    if mods["maraxsis"] or not mods["ThemTharHills"] then
+        rm.ReplaceIngredientProportional("cryogenic-plant", "superconductor", "cardinal-grammeter", 0.2)
+    end
 end
 
 --TUNER
