@@ -4,3 +4,4 @@ if mods["space-age"] then
 end
 
 require("compat/bz")
+require("compat/mod-planets")

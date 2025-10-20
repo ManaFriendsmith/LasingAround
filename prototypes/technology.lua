@@ -626,3 +626,51 @@ if mods["space-age"] and misc.starting_planet ~= "gleba" then
         }
     })
 end
+
+if mods["Paracelsin"] and misc.starting_planet ~= "paracelsin" then
+    data:extend({
+        {
+            type = "technology",
+            name = "a-world-with-substantially-less-zinc",
+            icons = {
+                {
+                    icon = "__base__/graphics/technology/laser.png",
+                    icon_size = 256,
+                    icon_mipmaps = 4
+                },
+                {
+                    icon = "__Paracelsin-Graphics__/graphics/icons/zinc-plate.png",
+                    icon_size = 64,
+                    icon_mipmaps = 4,
+                    scale = 0.5,
+                    shift = {32, 32}
+                }
+            },
+            effects = {
+                {
+                    type = "unlock-recipe",
+                    recipe = "galvaser"
+                }
+            },
+            prerequisites = {"promethium-science-pack"},
+            unit = {
+                count = 20000,
+                time = 60,
+                ingredients = {
+                    {"automation-science-pack", 1},
+                    {"logistic-science-pack", 1},
+                    {"military-science-pack", 1},
+                    {"chemical-science-pack", 1},
+                    {"production-science-pack", 1},
+                    {"utility-science-pack", 1},
+                    {"space-science-pack", 1},
+                    {"metallurgic-science-pack", 1},
+                    {"electromagnetic-science-pack", 1},
+                    {"agricultural-science-pack", 1},
+                    {"cryogenic-science-pack", 1},
+                    {"promethium-science-pack", 1}
+                }
+            }
+        }
+    })
+end

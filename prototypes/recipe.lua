@@ -351,6 +351,41 @@ if mods["space-age"] then
     end
 end
 
+if mods["Paracelsin"] then
+    data:extend({
+        {
+            type = "recipe",
+            name = "galvaser",
+            category = "mechanics",
+            icons = {
+                {
+                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon_size = 64
+                },
+                {
+                    icon = "__Paracelsin-Graphics__/graphics/icons/zinc-plate.png",
+                    icon_size = 64,
+                    scale = 0.25,
+                    shift = {8, 8}
+                }
+            },
+            ingredients = {
+                {type="item", name="advanced-circuit", amount=1},
+                {type="item", name="battery", amount=3},
+                {type="fluid", name="nitric-acid", amount=25},
+                {type="item", name="zinc-solder", amount=15},
+                {type="item", name=mods["BrassTacks"] and "pcl-zinc-plate" or "zinc-plate", amount=10},
+            },
+            results = {
+                {type="item", name="laser", amount=1}
+            },
+            energy_required = 16,
+            allow_productivity = true,
+            enabled = false
+        }
+    })
+end
+
 if tune_up_data then
   tune_up_data.recipes["laser"] = {
     category = "tuning-up",
@@ -618,6 +653,40 @@ end
 
 if misc.difficulty == 2 then
     return
+end
+
+if mods["Paracelsin"] then
+    --helium required for normal heat pipe recipe. fine for aquilo but paracelsin has at least the theoretical possibility for self sufficiency
+    data:extend({
+        {
+            type = "recipe",
+            name = "heat-pipe-vaterite",
+            category = "crafting",
+            icons = {
+                {
+                    icon = "__base__/graphics/icons/heat-pipe.png",
+                    icon_size = 64
+                },
+                {
+                    icon = "__Paracelsin-Graphics__/graphics/icons/vaterite-1.png",
+                    icon_size = 64,
+                    scale = 0.25,
+                    shift = {-8, -8}
+                }
+            },
+            ingredients = {
+                {type="item", name="copper-plate", amount=30},
+                {type="item", name=mods["IfNickel"] and "invar-plate" or "steel-plate", amount=15},
+                {type="item", name="vaterite", amount=20}
+            },
+            results = {
+                {type="item", name="heat-pipe", amount=1}
+            },
+            energy_required = 2,
+            auto_recycle = false,
+            enabled = false
+        }
+    })
 end
 
 if mods["space-age"] then
