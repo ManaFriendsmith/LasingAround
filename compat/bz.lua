@@ -29,7 +29,7 @@ if mods["bzsilicon"] then
         rm.AddIngredient("bioluminaser", "optical-fiber", 3)
 
         rm.AddLaserMillData("optical-fiber", {helium=-1}, {helium=-1})
-    elseif not data.raw.item["diamond"]
+    elseif not data.raw.item["diamond"] then
         rm.AddIngredient("laser", "silica", 3)
         rm.AddIngredient("lavaser", "silica", 3)
         rm.AddIngredient("bioluminaser", "silica", 3)
