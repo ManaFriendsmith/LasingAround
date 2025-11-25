@@ -265,7 +265,7 @@ if mods["space-age"] then
               trigger = data.raw.projectile["grenade"].action
             },
           fuel_category = "antimatter",
-          fuel_value = "1GJ",
+          fuel_value = "500MJ",
           fuel_acceleration_multiplier = 4,
           fuel_top_speed_multiplier = 1.5
         },
