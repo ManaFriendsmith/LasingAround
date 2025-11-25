@@ -94,13 +94,24 @@ if misc.difficulty == 3 then
     end
 end
 
+if settings.startup["planetfall-postgame-logistics"].value and misc.difficulty == 3 then
+    
+    if data.raw.item["quantum-encabulator"] then
+        rm.ReplaceIngredientProportional("superposition-splitter", "quantum-processor", "random-number-nullifier")
+    end
+    rm.AddIngredient("extradimensional-cargo-wagon", mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", 20)
+    rm.AddIngredient("extradimensional-fluid-wagon", mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", 20)
+    rm.AddIngredient("extradimensional-cargo-bay", mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", 20)
+    rm.ReplaceIngredientProportional("extradimensional-cargo-bay", "supercapacitor", "cardinal-grammeter", 0.66)
+end
+
 --TUNER
 if misc.difficulty == 3 and tune_up_data then
     if mods["IfNickel"] then
-        tune_up_data.ReplaceIngredientProportional("efficiency-module", "quantum-processor", "perpendicular-processor", 1)
+        tune_up_data.ReplaceIngredientProportional("efficiency-module-3", "quantum-processor", "perpendicular-processor", 1)
     else
-        tune_up_data.ReplaceIngredientProportional("efficiency-module", "quantum-processor", "logic-deregulator", 1)
+        tune_up_data.ReplaceIngredientProportional("efficiency-module-3", "quantum-processor", "logic-deregulator", 1)
     end
-    tune_up_data.ReplaceIngredientProportional("speed-module", "quantum-processor", "random-number-nullifier", 1)
-    tune_up_data.ReplaceIngredientProportional("quality-module", "quantum-processor", "ai-girlfriend", 1)
+    tune_up_data.ReplaceIngredientProportional("speed-module-3", "quantum-processor", "ai-girlfriend", 1)
+    tune_up_data.ReplaceIngredientProportional("quality-module-3", "quantum-processor", "random-number-nullifier", 1)
 end
