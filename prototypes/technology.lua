@@ -674,3 +674,95 @@ if mods["Paracelsin"] and misc.starting_planet ~= "paracelsin" then
         }
     })
 end
+
+if mods["castra"] and misc.starting_planet ~= "castra" then
+    data:extend({
+        {
+            type = "technology",
+            name = "propaganda",
+            icons = {
+                {
+                    icon = "__base__/graphics/technology/laser.png",
+                    icon_size = 256,
+                    icon_mipmaps = 4
+                },
+                {
+                    icon = "__castra__/graphics/icons/castra-data.png",
+                    icon_size = 64,
+                    icon_mipmaps = 4,
+                    scale = 0.5,
+                    shift = {32, 32}
+                }
+            },
+            effects = {
+                {
+                    type = "unlock-recipe",
+                    recipe = "milaser"
+                }
+            },
+            prerequisites = {"promethium-science-pack"},
+            unit = {
+                count = 20000,
+                time = 60,
+                ingredients = {
+                    {"automation-science-pack", 1},
+                    {"logistic-science-pack", 1},
+                    {"military-science-pack", 1},
+                    {"chemical-science-pack", 1},
+                    {"production-science-pack", 1},
+                    {"utility-science-pack", 1},
+                    {"space-science-pack", 1},
+                    {"metallurgic-science-pack", 1},
+                    {"electromagnetic-science-pack", 1},
+                    {"agricultural-science-pack", 1},
+                    {"cryogenic-science-pack", 1},
+                    {"promethium-science-pack", 1}
+                }
+            }
+        }
+    })
+end
+
+if mods["castra"] then
+    data:extend({
+        {
+            type = "technology",
+            name = "hydrogen-sulfide-spectroscopy",
+            icons = {
+                {
+                    icon = "__castra__/graphics/technology/hydrogen-sulfide-vent.png",
+                    icon_size = 256
+                },
+                {
+                    icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+                    icon_size = 256,
+                    scale = 0.25,
+                    shift = {-32, -32}
+                }
+            },
+            effects = {
+                {
+                    type = "unlock-recipe",
+                    recipe = "spectroscopic-hydrogen-sulfide-electrolysis"
+                }
+            },
+            prerequisites = {"battlefield-science-pack", "spectroscopic-petrochemistry"},
+            unit = {
+                count = 2000,
+                time = 60,
+                ingredients = {
+                    {"automation-science-pack", 1},
+                    {"logistic-science-pack", 1},
+                    {"military-science-pack", 1},
+                    {"chemical-science-pack", 1},
+                    {"production-science-pack", 1},
+                    {"utility-science-pack", 1},
+                    {"space-science-pack", 1},
+                    {"metallurgic-science-pack", 1},
+                    {"electromagnetic-science-pack", 1},
+                    {"battlefield-science-pack", 1}
+                }
+            }
+        }
+    })
+end

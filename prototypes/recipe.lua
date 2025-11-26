@@ -386,6 +386,49 @@ if mods["Paracelsin"] then
     })
 end
 
+if mods["castra"] then
+    data:extend({
+        {
+            type = "recipe",
+            name = "milaser",
+            category = "castra-forge",
+            icons = {
+                {
+                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon_size = 64
+                },
+                {
+                    icon = "__castra__/graphics/icons/castra-data.png",
+                    icon_size = 64,
+                    scale = 0.25,
+                    shift = {8, 8}
+                }
+            },
+            ingredients = {
+                {type="item", name="advanced-circuit", amount=1},
+                {type="item", name="battery", amount=3},
+                {type="item", name="castra-data", amount=1},
+                {type="item", name=mods["IfNickel"] and "cst-nickel-plate" or "nickel-plate", amount=5},
+            },
+            results = {
+                {type="item", name="laser", amount=1}
+            },
+            energy_required = 16,
+            allow_productivity = true,
+            enabled = false
+        }
+    })
+
+    local h2srecipe = table.deepcopy(data.raw.recipe["hydrogen-sulfide-electrolysis"])
+    h2srecipe.name = "spectroscopic-hydrogen-sulfide-electrolysis"
+    table.insert(h2srecipe.icons, {icon="__LasingAround__/graphics/icons/spectroscope.png", icon_size=64})
+    rm.MultiplyRecipe(h2srecipe, 5)
+    rm.AddIngredient(h2srecipe, "spectroscope", 1)
+    rm.AddProduct(h2srecipe, {type="item", name="spectroscope", amount=1, probability=0.99})
+    rm.AddProduct(h2srecipe, {type="fluid", name="helium", amount=10})
+    data:extend({h2srecipe})
+end
+
 if tune_up_data then
   tune_up_data.recipes["laser"] = {
     category = "tuning-up",
