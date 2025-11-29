@@ -125,7 +125,7 @@ rm.AddLaserMillData("rail-support", {helium=-1, unlock="elevated-rail"}, false)
 
 if data.raw.item["tracker"] then
     if not mods["space-age"] then
-        rm.AddPrerequisite("logistic-system", "tracking-systems")
+        tm.AddPrerequisite("logistic-system", "tracking-systems")
     end
     rm.ReplaceIngredientProportional("requester-chest", "transceiver", "tracker")
     rm.ReplaceIngredientProportional("buffer-chest", "transceiver", "tracker")

@@ -24,7 +24,7 @@ local lasermill = {
   selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
   crafting_categories = {"laser-assembling", "laser-milling", "laser-milling-exclusive"},
   crafting_speed = 2,
-  heating_energy = "150kW",
+  heating_energy = mods["space-age"] and "150kW" or nil,
   energy_source =
   {
     type = "electric",
@@ -162,13 +162,13 @@ local lasermill = {
         }
       }
     },
-    frozen_patch = {
+    frozen_patch = mods["space-age"] and {
         filename = "__LasingAround__/graphics/entity/laser-mill/lm-frozen.png",
         width = 192,
         height = 240,
         shift = util.by_pixel(0, -12),
         scale = 0.5
-    },
+    } or nil,
     reset_animation_when_frozen = false
   },
   working_sound = {
