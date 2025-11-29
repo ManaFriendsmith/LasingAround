@@ -5,3 +5,4 @@ end
 
 require("compat/bz")
 require("compat/mod-planets")
+require("compat.small-mod")
