@@ -105,5 +105,7 @@ if mods["castra"] then
     rm.AddLaserMillData("nickel-battery", false, {helium=-1, unlock="millerite-processing"})
 end
 
-local yield = math.floor((#data.raw.recipe["dormant-newtronic-chip"].ingredients - 1) / 2)
-rm.MultiplyRecipe("dormant-newtronic-chip", {input=1, time=yield, output=yield})
+if misc.difficulty == 3 then
+    local yield = math.floor((#data.raw.recipe["dormant-newtronic-chip"].ingredients - 1) / 2)
+    rm.MultiplyRecipe("dormant-newtronic-chip", {input=1, time=yield, output=yield})
+end
