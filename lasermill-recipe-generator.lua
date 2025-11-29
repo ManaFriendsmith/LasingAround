@@ -171,8 +171,10 @@ end
 local function get_prototype(name)
   local possibilities = {"item", "fluid", "ammo", "capsule", "gun", "item-with-entity-data", "item-with-label", "module", "rail-planner", "spidertron-remote", "tool", "armor", "repair-tool"}
   for k, v in pairs(possibilities) do
-    local prototype = data.raw[v][name]
-    if prototype then return prototype end
+    if data.raw[v] then
+      local prototype = data.raw[v][name]
+      if prototype then return prototype end
+    end
   end
   log("tried to get prototype for nonexistent item/fluid: " .. name)
   return false
