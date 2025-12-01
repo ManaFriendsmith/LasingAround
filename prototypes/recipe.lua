@@ -43,7 +43,7 @@ data:extend({
         },
         results = {
             {type="fluid", name="filtered-oil", amount=50, ignored_by_productivity=50},
-            {type="fluid", name="helium", amount=10}
+            {type="fluid", name="helium", amount=mods["LunarLandings"] and 3 or 10}
         },
         allow_quality = false,
         allow_productivity = true,
@@ -82,7 +82,7 @@ data:extend({
         },
         results = {
             {type="fluid", name="filtered-oil", amount=100, ignored_by_productivity=100},
-            {type="fluid", name="helium", amount=30},
+            {type="fluid", name="helium", amount=mods["LunarLandings"] and 20 or 10},
             {type="item", name="spectroscope", amount=1, probability=0.99, ignored_by_stats=1, ignored_by_productivity=1},
             {type="fluid", name="heavy-oil", amount=5}
         },
@@ -168,21 +168,64 @@ data:extend({
     }
 })
 
-if misc.starting_planet == "vulcanus" then
+if mods["LunarLandings"] then
     data:extend({
-
-    })
-end
-
-if misc.starting_planet == "fulgora" then
-    data:extend({
-        
-    })
-end
-
-if misc.starting_planet == "gleba" then
-    data:extend({
-        
+        {
+            type = "recipe",
+            name = "ll-helium-extraction",
+            category = "ll-electric-smelting",
+            subgroup = "ll-raw-material-moon",
+            order = "a[moon-rock]-c",
+            icon = "__LasingAround__/graphics/icons/helium.png",
+            icon_size = 64,
+            ingredients = {
+                {type="item", name="ll-moon-rock", amount=10},
+                {type="fluid", name="steam", amount=20, fluidbox_index=1}
+            },
+            results = {
+                {type="item", name="ll-moon-rock", amount_min=6, amount_max=9, ignored_by_productivity=9},
+                {type="fluid", name="helium", amount=20, fluidbox_index=1}
+            },
+            energy_required = 10,
+            enabled = false
+        },
+        {
+            type = "recipe",
+            name = "polariton-laser",
+            category = "advanced-circuit-crafting",
+            localised_name = { "recipe-name.polariton-laser" },
+            icons = {
+                {
+                icon = "__LasingAround__/graphics/icons/laser.png",
+                icon_size = 64
+                },
+                {
+                icon = "__LunarLandings__/graphics/icons/polariton/polariton.png",
+                icon_size = 64,
+                scale = 0.25,
+                shift = {-8, -8}
+                }
+            },
+            energy_required = 60,
+            allow_decomposition = false,
+            ingredients = {
+                {type="item", name="battery", amount=20},
+                {type="item", name="ll-silica", amount=100},
+                {type="item", name="ll-superposed-polariton", amount=1},
+                {type="item", name="ll-up-polariton", amount=1},
+                {type="fluid", name="ll-astroflux", amount=50}
+            },
+            results = {
+                {type="item", name="laser", amount=20},
+                {type="item", name="ll-up-polariton", amount=1, probability=0.2, ignored_by_productivity=1},
+                {type="item", name="ll-down-polariton", amount=1, probability=0.4, ignored_by_productivity=1},
+                {type="item", name="ll-left-polariton", amount=1, probability=0.6, ignored_by_productivity=1},
+                {type="item", name="ll-right-polariton", amount=1, probability=0.8, ignored_by_productivity=1}
+            },
+            main_product = "laser",
+            allow_productivity = true,
+            enabled = false
+        }
     })
 end
 
@@ -349,6 +392,40 @@ if mods["space-age"] then
     if data.raw.item["philosophers-hormone"] then
         rm.AddProduct("spectroscopic-bioflux-processing", {type="item", name="philosophers-hormone", amount=1, probability=0.5})
     end
+end
+
+if mods["maraxsis"] then
+    data:extend({
+        {
+            type = "recipe",
+            name = "halaser",
+            category = "maraxsis-hydro-plant",
+            icons = {
+                {
+                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon_size = 64
+                },
+                {
+                    icon = "__maraxsis__/graphics/icons/salt-1.png",
+                    icon_size = 64,
+                    scale = 0.25,
+                    shift = {8, 8}
+                }
+            },
+            ingredients = {
+                {type="item", name="advanced-circuit", amount=1},
+                {type="item", name="battery", amount=3},
+                {type="fluid", name="molten-salt", amount=25},
+                {type="item", name="maraxsis-glass-panes", amount=5},
+            },
+            results = {
+                {type="item", name="laser", amount=1}
+            },
+            energy_required = 16,
+            allow_productivity = true,
+            enabled = false
+        }
+    })
 end
 
 if mods["Paracelsin"] then
@@ -692,6 +769,42 @@ if data.raw.item["tracker"] then
             enabled = false
         }
     })
+
+    if mods["LunarLandings"] then
+        data:extend({
+        {
+            type = "recipe",
+            name = "rocket-control-unit-tracker",
+            category = "advanced-circuit-crafting",
+            icons = {
+            {
+                icon = mods["space-age"] and "__pf-sa-compat__/graphics/icons/lunar-navigation-unit.png" or "__LunarLandings__/graphics/icons/rocket-control-unit.png",
+                icon_size = 64
+            },
+            {
+                icon = "__LasingAround__/graphics/icons/tracker.png",
+                icon_size = 64,
+                scale = 0.25,
+                shift = {-8, -8}
+            }
+            },
+            energy_required = 800,
+            allow_decomposition = false,
+            ingredients = {
+                {type="item", name="ll-quantum-processor", amount=1},
+                {type="item", name="tracker", amount=20},
+                {type="item", name="ll-data-card", amount=1}
+            },
+            results = {
+                {type="item", name=mods["space-age"] and "ll-rocket-control-unit" or "rocket-control-unit", amount=20},
+                {type="item", name="ll-junk-data-card", amount=1, ignored_by_productivity=1}
+            },
+            main_product = mods["space-age"] and "ll-rocket-control-unit" or "rocket-control-unit",
+            allow_productivity = true,
+            enabled = false
+        }
+        })
+    end
 end
 
 if misc.difficulty == 2 then
@@ -770,9 +883,8 @@ if mods["space-age"] then
             },
             ingredients = {
                 {type="item", name="electromagnetic-plant", amount=1},
-                {type="item", name="supercapacitor", amount=50},
+                {type="item", name="supercapacitor", amount=100},
                 {type="item", name="laser", amount=100},
-                {type="item", name="weird-alien-gizmo", amount=50},
                 {type="item", name="cardinal-grammeter", amount=50},
                 {type="fluid", name="helium", amount=250}
             },
@@ -833,7 +945,7 @@ if mods["space-age"] then
             ingredients = {
                 {type="item", name="high-density-chaos", amount=1},
                 {type="item", name="uranium-235", amount=1},
-                {type="item", name="iron-gear-wheel", amount=4}
+                {type="item", name="advanced-circuit", amount=1}
             },
             results = {
                 {type="item", name="random-number-nullifier", amount=1}
@@ -1011,6 +1123,7 @@ if mods["space-age"] then
                 category = "conceptual-inversion",
                 ingredients = {
                     {type="item", name="art-rotators", amount=5},
+                    {type="item", name="iron-stick", amount=7},
                     {type="item", name="processing-unit", amount=1}
                 },
                 results = {
@@ -1055,14 +1168,15 @@ if mods["space-age"] then
             },
             {
                 type = "recipe",
-                name = "perpendicular-processor",
+                name = "logic-deregulator",
                 category = "conceptual-inversion",
                 ingredients = {
-                    {type="item", name="art-rotators", amount=5},
+                    {type="item", name="pentapod-gatekeeper", amount=1},
+                    {type="item", name="hazard-concrete", amount=10},
                     {type="item", name="processing-unit", amount=1}
                 },
                 results = {
-                    {type="item", name="perpendicular-processor", amount=1}
+                    {type="item", name="logic-deregulator", amount=1}
                 },
                 force_auto_recycle = true,
                 energy_required = 20,
