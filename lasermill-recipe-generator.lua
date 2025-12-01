@@ -6,6 +6,7 @@ local canonical_item_costs = {}
 
 local function get_canonical_recipe(item)
   --if a canonical recipe is specified, use that. no questions asked.
+  if item.cost_canonical_recipe ~= nil then return item.cost_canonical_recipe end
   if item.canonical_recipe ~= nil then return item.canonical_recipe end
 
   --if a recipe exists with the exact same name that produces the item, use that.
@@ -126,7 +127,10 @@ local function GetRecipeCost(recipe)
       a = a - rm.GetIngredientCount(recipe, solid_products[1].name)
 
       if a > 0 and not canonical_item_costs[solid_products[1].name] then
-        canonical_item_costs[solid_products[1].name] = cumulative_cost / a
+        local prot = misc.GetPrototype(solid_products[1].name)
+        if prot and get_canonical_recipe(prot) == recipe.name then
+          canonical_item_costs[solid_products[1].name] = cumulative_cost / a
+        end
       end
     end
   end
@@ -330,9 +334,12 @@ for name, recipe in pairs(data.raw.recipe) do
         if lasdata.convert then
           recipe_copy.name = name .. "-in-orbit"
           recipe_copy.category = lasdata.se_variant
+          recipe_copy.additional_categories = nil
+          recipe.additional_categories = nil
         else
           recipe_copy.name = name .. "-in-laser-mill"
           recipe_copy.category = "laser-milling"
+          recipe_copy.additional_categories = nil
           new_recipes_helium[recipe_copy.name] = lasdata.helium or 1
           if lasdata.multiply then
             new_recipes_multipliers[recipe_copy.name] = lasdata.multiply
