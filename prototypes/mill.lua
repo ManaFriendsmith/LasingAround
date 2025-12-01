@@ -33,7 +33,7 @@ local lasermill = {
   },
   energy_usage = mods["space-age"] and "1500kW" or "850kW",
   module_slots = 4,
-  effect_receiver = { base_effect = mods["space-age"] and { productivity = 1 } or { productivity = 0.6 }},
+  effect_receiver = { base_effect = mods["space-age"] and { productivity = 1 } or { productivity = 0.5 }},
   entity_info_icon_shift = {0, 0.5},
   allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
   fluid_boxes = {
@@ -185,7 +185,8 @@ local lasermill = {
   },
   open_sound = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].open_sound),
   close_sound = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].close_sound),
-  vehicle_impact_sound = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].vehicle_impact_sound)
+  vehicle_impact_sound = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"].vehicle_impact_sound),
+  ll_surface_conditions = {nauvis=true, luna={plain=false, lowland=false, mountain=false, foundation=true}}
 }
 
 data:extend({
