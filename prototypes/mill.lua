@@ -4,7 +4,7 @@ local item_sounds = require("__base__/prototypes/item_sounds")
 local lasermill_pipes = assembler2pipepictures()
 lasermill_pipes.south =
 {
-  filename = "__LasingAround__/graphics/entity/laser-mill/lm-pipe.png",
+  filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-pipe.png",
   priority = "extra-high",
   width = 88,
   height = 61,
@@ -15,7 +15,7 @@ lasermill_pipes.south =
 local lasermill = {
   type = "assembling-machine",
   name = "laser-mill",
-  icon = "__LasingAround__/graphics/icons/laser-mill.png",
+  icon = "__LasingAroundMk2__/graphics/icons/laser-mill.png",
   icon_size = 64, icon_mipmaps = 4,
   flags = {"placeable-neutral", "placeable-player", "player-creation"},
   minable = {mining_time = 0.25, result = "laser-mill"},
@@ -78,7 +78,7 @@ local lasermill = {
       animation = {
         layers = {
           {
-              filename = "__LasingAround__/graphics/entity/laser-mill/lm-table-hot.png",
+              filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-table-hot.png",
               priority = "high",
               width = 192,
               height = 176,
@@ -89,7 +89,7 @@ local lasermill = {
               animation_speed = 0.175,
           },
           {
-              filename = "__LasingAround__/graphics/entity/laser-mill/lm-beams.png",
+              filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-beams.png",
               priority = "high",
               draw_as_glow = true,
               width = 192,
@@ -100,7 +100,7 @@ local lasermill = {
               shift = util.by_pixel(0, -12),
           },
           {
-              filename = "__LasingAround__/graphics/entity/laser-mill/lm-box.png",
+              filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-box.png",
               priority = "high",
               width = 192,
               height = 240,
@@ -110,7 +110,7 @@ local lasermill = {
               shift = util.by_pixel(0, -12),
           },
           {
-              filename = "__LasingAround__/graphics/entity/laser-mill/lm-glow.png",
+              filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-glow.png",
               priority = "high",
               width = 240,
               height = 240,
@@ -126,7 +126,7 @@ local lasermill = {
     animation = {
       layers = {
         {
-          filename = "__LasingAround__/graphics/entity/laser-mill/lm-shadow.png",
+          filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-shadow.png",
           priority = "high",
           width = 320,
           height = 192,
@@ -139,7 +139,7 @@ local lasermill = {
           draw_as_shadow = true,
         },
         {
-          filename = "__LasingAround__/graphics/entity/laser-mill/lm-table.png",
+          filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-table.png",
           priority = "high",
           width = 192,
           height = 240,
@@ -150,7 +150,7 @@ local lasermill = {
           animation_speed = 0.175,
         },
         {
-          filename = "__LasingAround__/graphics/entity/laser-mill/lm-box.png",
+          filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-box.png",
           priority = "high",
           width = 192,
           height = 240,
@@ -163,7 +163,7 @@ local lasermill = {
       }
     },
     frozen_patch = mods["space-age"] and {
-        filename = "__LasingAround__/graphics/entity/laser-mill/lm-frozen.png",
+        filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-frozen.png",
         width = 192,
         height = 240,
         shift = util.by_pixel(0, -12),
@@ -175,7 +175,7 @@ local lasermill = {
       sound =
       {
         {
-          filename = "__LasingAround__/sound/lasermill.ogg",
+          filename = "__LasingAroundMk2__/sound/lasermill.ogg",
           volume = 0.85
         }
       },
@@ -194,7 +194,7 @@ data:extend({
   {
     type = "item",
     name = "laser-mill",
-    icon = "__LasingAround__/graphics/icons/laser-mill.png",
+    icon = "__LasingAroundMk2__/graphics/icons/laser-mill.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -221,7 +221,7 @@ data:extend({
   {
     type = "corpse",
     name = "laser-mill-remnants",
-    icon = "__LasingAround__/graphics/icons/laser-mill.png",
+    icon = "__LasingAroundMk2__/graphics/icons/laser-mill.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
     subgroup = "production-machine-remnants",
@@ -233,7 +233,7 @@ data:extend({
     time_before_removed = 60 * 60 * 15,
     animation = {
         direction_count = 1,
-        filename = "__LasingAround__/graphics/entity/laser-mill/lm-remnant.png",
+        filename = "__LasingAroundMk2__/graphics/entity/laser-mill/lm-remnant.png",
         priority = "high",
         width = 192,
         height = 192,

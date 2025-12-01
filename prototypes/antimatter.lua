@@ -150,7 +150,7 @@ end
 local antimatter = {
     type = "assembling-machine",
     name = "antiparticle-decelerator",
-    icon = "__LasingAround__/graphics/icons/antiparticle-decelerator.png",
+    icon = "__LasingAroundMk2__/graphics/icons/antiparticle-decelerator.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "antiparticle-decelerator"},
     fast_replaceable_group = "antiparticle-decelerator",
@@ -176,7 +176,7 @@ local antimatter = {
       idle_animation = {
         layers = {
             {
-                filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-lower.png",
+                filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-lower.png",
                 width = 192,
                 height = 192,
                 frame_count = 8,
@@ -187,7 +187,7 @@ local antimatter = {
                 scale = 0.5    
             },
             {
-                filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-upper.png",
+                filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-upper.png",
                 width = 192,
                 height = 192,
                 frame_count = 5,
@@ -198,7 +198,7 @@ local antimatter = {
                 scale = 0.5    
             },
             {
-                filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-shadow.png",
+                filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-shadow.png",
                 width = 292,
                 height = 192,
                 draw_as_shadow = true,
@@ -215,7 +215,7 @@ local antimatter = {
       animation = {
         layers = {
           {
-            filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-lower.png",
+            filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-lower.png",
             width = 192,
             height = 192,
             frame_count = 8,
@@ -226,7 +226,7 @@ local antimatter = {
             scale = 0.5    
           },
           {
-            filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-orb.png",
+            filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-orb.png",
             width = 192,
             height = 192,
             frame_count = 3,
@@ -238,7 +238,7 @@ local antimatter = {
             scale = 0.5    
           },
           {
-            filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-lower-blast.png",
+            filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-lower-blast.png",
             width = 192,
             height = 192,
             frame_count = 17,
@@ -250,7 +250,7 @@ local antimatter = {
             scale = 0.5    
           },
           {
-            filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-upper-blast.png",
+            filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-upper-blast.png",
             width = 192,
             height = 192,
             frame_count = 11,
@@ -262,7 +262,7 @@ local antimatter = {
             scale = 0.5    
           },
           {
-            filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-upper.png",
+            filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-upper.png",
             width = 192,
             height = 192,
             frame_count = 5,
@@ -273,7 +273,7 @@ local antimatter = {
             scale = 0.5    
           },
           {
-            filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-big-glow.png",
+            filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-big-glow.png",
             width = 768,
             height = 768,
             frame_count = 3,
@@ -285,7 +285,7 @@ local antimatter = {
             scale = 0.5    
           },
           {
-            filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-shadow.png",
+            filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-shadow.png",
             width = 292,
             height = 192,
             draw_as_shadow = true,
@@ -300,7 +300,7 @@ local antimatter = {
         }
       },
       frozen_patch = {
-          filename = "__LasingAround__/graphics/entity/antiparticle-decelerator/ad-frozen.png",
+          filename = "__LasingAroundMk2__/graphics/entity/antiparticle-decelerator/ad-frozen.png",
           width = 192,
           height = 192,
           scale = 0.5
@@ -336,7 +336,7 @@ car2.name = "reference-car"
 car2.minable.result = "reference-car"
 car2.animation.layers[2].apply_runtime_tint = false
 car2.animation.layers[2].tint = {r=1, g=0.5, b=0.75, a=0.9}
-car2.icon = "__LasingAround__/graphics/icons/reference-car.png"
+car2.icon = "__LasingAroundMk2__/graphics/icons/reference-car.png"
 car2.hidden_in_factoriopedia = true
 
 data:extend({
@@ -345,7 +345,7 @@ data:extend({
     {
         type = "item",
         name = "antiparticle-decelerator",
-        icon = "__LasingAround__/graphics/icons/antiparticle-decelerator.png",
+        icon = "__LasingAroundMk2__/graphics/icons/antiparticle-decelerator.png",
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "production-machine",
@@ -360,7 +360,7 @@ data:extend({
     {
         type = "item",
         name = "reference-car",
-        icon = "__LasingAround__/graphics/icons/reference-car.png",
+        icon = "__LasingAroundMk2__/graphics/icons/reference-car.png",
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "inversion",
@@ -395,7 +395,7 @@ data:extend({
         name = "the-fast-and-the-yurious",
         order = "g",
         to_build = "reference-car",
-        icon = "__LasingAround__/graphics/achievement/the-fast-and-the-yurious.png",
+        icon = "__LasingAroundMk2__/graphics/achievement/the-fast-and-the-yurious.png",
         icon_size = 128
     },
     {

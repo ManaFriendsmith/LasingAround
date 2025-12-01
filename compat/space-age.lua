@@ -28,7 +28,7 @@ if misc.starting_planet == "gleba" then
     tm.AddUnlock("laser", "bioluminaser")
 end
 
-if data.raw.item["mutagenic-sludge"] and mods["BrimStuff"] then
+if data.raw.item["mutagenic-sludge"] and mods["BrimStuffMk2"] then
     tm.AddUnlock("advanced-sludge-handling", "mutagenic-sludge-obliteration")
     tm.AddUnlock("advanced-sludge-handling", "catastrophe-aversion")
 end
@@ -85,11 +85,11 @@ if misc.difficulty == 3 then
     tm.AddUnlock("quantum-processor", "dormant-newtronic-chip", "-quantum-processor")
     tm.AddPrerequisite("quantum-processor", "waifugenesis")
     tm.AddPrerequisite("quantum-processor", "probability-manipulation")
-    tm.AddPrerequisite("quantum-processor", mods["IfNickel"] and "geometry-abolition" or "laissez-faire-mathematics")
+    tm.AddPrerequisite("quantum-processor", mods["IfNickelMk2"] and "geometry-abolition" or "laissez-faire-mathematics")
     rm.ReplaceIngredientProportional("quantum-processor", "processing-unit", "pulsing-newtronic-chip")
 
     rm.ReplaceIngredientProportional("railgun-turret", "superconductor", "cardinal-grammeter", 0.1)
-    if mods["maraxsis"] or not mods["ThemTharHills"] then
+    if mods["maraxsis"] or not mods["ThemTharHillsMk2"] then
         rm.ReplaceIngredientProportional("cryogenic-plant", "superconductor", "cardinal-grammeter", 0.2)
     end
 end
@@ -99,15 +99,15 @@ if settings.startup["planetfall-postgame-logistics"].value and misc.difficulty =
     if data.raw.item["quantum-encabulator"] then
         rm.ReplaceIngredientProportional("superposition-splitter", "quantum-processor", "random-number-nullifier")
     end
-    rm.AddIngredient("extradimensional-cargo-wagon", mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", 20)
-    rm.AddIngredient("extradimensional-fluid-wagon", mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", 20)
-    rm.AddIngredient("extradimensional-cargo-bay", mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", 20)
+    rm.AddIngredient("extradimensional-cargo-wagon", mods["IfNickelMk2"] and "perpendicular-processor" or "logic-deregulator", 20)
+    rm.AddIngredient("extradimensional-fluid-wagon", mods["IfNickelMk2"] and "perpendicular-processor" or "logic-deregulator", 20)
+    rm.AddIngredient("extradimensional-cargo-bay", mods["IfNickelMk2"] and "perpendicular-processor" or "logic-deregulator", 20)
     rm.ReplaceIngredientProportional("extradimensional-cargo-bay", "supercapacitor", "cardinal-grammeter", 0.66)
 end
 
 --TUNER
 if misc.difficulty == 3 and tune_up_data then
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         tune_up_data.ReplaceIngredientProportional("efficiency-module-3", "quantum-processor", "perpendicular-processor", 1)
     else
         tune_up_data.ReplaceIngredientProportional("efficiency-module-3", "quantum-processor", "logic-deregulator", 1)

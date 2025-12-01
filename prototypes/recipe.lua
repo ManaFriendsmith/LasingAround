@@ -30,7 +30,7 @@ data:extend({
         type = "recipe",
         name = "advanced-oil-filtration",
         localised_description = {"recipe-description.helium-productivity-rules"},
-        icon = "__LasingAround__/graphics/icons/advanced-oil-filtration.png",
+        icon = "__LasingAroundMk2__/graphics/icons/advanced-oil-filtration.png",
         icon_size = 64,
         subgroup = "helium",
         order = "b",
@@ -60,11 +60,11 @@ data:extend({
         localised_description = {"recipe-description.helium-productivity-rules"},
         icons = {
           {
-            icon = "__LasingAround__/graphics/icons/advanced-oil-filtration.png",
+            icon = "__LasingAroundMk2__/graphics/icons/advanced-oil-filtration.png",
             icon_size = 64,
           },
           {
-            icon = "__LasingAround__/graphics/icons/spectroscope.png",
+            icon = "__LasingAroundMk2__/graphics/icons/spectroscope.png",
             icon_size = 64,
             scale=0.25,
             shift={-8, 8}
@@ -93,7 +93,7 @@ data:extend({
       {
         type = "recipe",
         name = "helium-venting",
-        icon = "__LasingAround__/graphics/icons/helium-venting.png",
+        icon = "__LasingAroundMk2__/graphics/icons/helium-venting.png",
         icon_size = 64,
         subgroup = "helium",
         order = "d",
@@ -176,7 +176,7 @@ if mods["LunarLandings"] then
             category = "ll-electric-smelting",
             subgroup = "ll-raw-material-moon",
             order = "a[moon-rock]-c",
-            icon = "__LasingAround__/graphics/icons/helium.png",
+            icon = "__LasingAroundMk2__/graphics/icons/helium.png",
             icon_size = 64,
             ingredients = {
                 {type="item", name="ll-moon-rock", amount=10},
@@ -196,7 +196,7 @@ if mods["LunarLandings"] then
             localised_name = { "recipe-name.polariton-laser" },
             icons = {
                 {
-                icon = "__LasingAround__/graphics/icons/laser.png",
+                icon = "__LasingAroundMk2__/graphics/icons/laser.png",
                 icon_size = 64
                 },
                 {
@@ -241,7 +241,7 @@ if mods["space-age"] then
                     icon_mipmaps = 4
                 },
                 {
-                    icon = "__LasingAround__/graphics/icons/spectroscope.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/spectroscope.png",
                     icon_size = 64,
                     scale = 0.25,
                     shift = {-8, -8}
@@ -276,7 +276,7 @@ if mods["space-age"] then
                     icon_mipmaps = 4
                 },
                 {
-                    icon = "__LasingAround__/graphics/icons/spectroscope.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/spectroscope.png",
                     icon_size = 64,
                     scale = 0.25,
                     shift = {-8, -8}
@@ -305,7 +305,7 @@ if mods["space-age"] then
             category = "metallurgy",
             icons = {
                 {
-                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/laser.png",
                     icon_size = 64
                 },
                 {
@@ -335,7 +335,7 @@ if mods["space-age"] then
             category = "electromagnetics",
             icons = {
                 {
-                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/laser.png",
                     icon_size = 64
                 },
                 {
@@ -364,7 +364,7 @@ if mods["space-age"] then
             category = "organic",
             icons = {
                 {
-                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/laser.png",
                     icon_size = 64
                 },
                 {
@@ -402,7 +402,7 @@ if mods["maraxsis"] then
             category = "maraxsis-hydro-plant",
             icons = {
                 {
-                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/laser.png",
                     icon_size = 64
                 },
                 {
@@ -436,7 +436,7 @@ if mods["Paracelsin"] then
             category = "mechanics",
             icons = {
                 {
-                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/laser.png",
                     icon_size = 64
                 },
                 {
@@ -451,7 +451,7 @@ if mods["Paracelsin"] then
                 {type="item", name="battery", amount=3},
                 {type="fluid", name="nitric-acid", amount=25},
                 {type="item", name="zinc-solder", amount=15},
-                {type="item", name=mods["BrassTacks"] and "pcl-zinc-plate" or "zinc-plate", amount=10},
+                {type="item", name=mods["BrassTacksMk2"] and "pcl-zinc-plate" or "zinc-plate", amount=10},
             },
             results = {
                 {type="item", name="laser", amount=1}
@@ -471,7 +471,7 @@ if mods["castra"] then
             category = "castra-forge",
             icons = {
                 {
-                    icon = "__LasingAround__/graphics/icons/laser.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/laser.png",
                     icon_size = 64
                 },
                 {
@@ -485,7 +485,7 @@ if mods["castra"] then
                 {type="item", name="advanced-circuit", amount=1},
                 {type="item", name="battery", amount=3},
                 {type="item", name="castra-data", amount=1},
-                {type="item", name=mods["IfNickel"] and "cst-nickel-plate" or "nickel-plate", amount=5},
+                {type="item", name=mods["IfNickelMk2"] and "cst-nickel-plate" or "nickel-plate", amount=5},
             },
             results = {
                 {type="item", name="laser", amount=1}
@@ -498,7 +498,7 @@ if mods["castra"] then
 
     local h2srecipe = table.deepcopy(data.raw.recipe["hydrogen-sulfide-electrolysis"])
     h2srecipe.name = "spectroscopic-hydrogen-sulfide-electrolysis"
-    table.insert(h2srecipe.icons, {icon="__LasingAround__/graphics/icons/spectroscope.png", icon_size=64})
+    table.insert(h2srecipe.icons, {icon="__LasingAroundMk2__/graphics/icons/spectroscope.png", icon_size=64})
     rm.MultiplyRecipe(h2srecipe, 5)
     rm.AddIngredient(h2srecipe, "spectroscope", 1)
     rm.AddProduct(h2srecipe, {type="item", name="spectroscope", amount=1, probability=0.99})
@@ -681,7 +681,7 @@ if mods["space-age"] then
                     icon_size = 64
                   },
                   {
-                    icon = "__LasingAround__/graphics/icons/weird-alien-gizmo.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/weird-alien-gizmo.png",
                     icon_size = 64
                   },
                   {
@@ -694,7 +694,7 @@ if mods["space-age"] then
             results = {
                 {type="item", name="holmium-ore", amount=1, probability=0.2},
                 {type="item", name="battery", amount=1, probability=0.2},
-                {type="item", name=mods["ThemTharHills"] and "gold-wire" or "copper-cable", amount=1, probability=mods["ThemTharHills"] and 0.8 or 0.7},
+                {type="item", name=mods["ThemTharHillsMk2"] and "gold-wire" or "copper-cable", amount=1, probability=mods["ThemTharHillsMk2"] and 0.8 or 0.7},
                 {type="item", name="processing-unit", amount=1, probability=0.1},
                 {type="item", name="laser", amount=1, probability=0.1},
                 {type="item", name="depleted-uranium-fuel-cell", amount=1, probability=0.01}
@@ -729,7 +729,7 @@ data:extend({
     }
 })
 
-if mods["IfNickel"] and not mods["space-age"] then
+if mods["IfNickelMk2"] and not mods["space-age"] then
     data:extend({
         {
             type = "recipe",
@@ -782,7 +782,7 @@ if data.raw.item["tracker"] then
                 icon_size = 64
             },
             {
-                icon = "__LasingAround__/graphics/icons/tracker.png",
+                icon = "__LasingAroundMk2__/graphics/icons/tracker.png",
                 icon_size = 64,
                 scale = 0.25,
                 shift = {-8, -8}
@@ -832,7 +832,7 @@ if mods["Paracelsin"] then
             },
             ingredients = {
                 {type="item", name="copper-plate", amount=30},
-                {type="item", name=mods["IfNickel"] and "invar-plate" or "steel-plate", amount=15},
+                {type="item", name=mods["IfNickelMk2"] and "invar-plate" or "steel-plate", amount=15},
                 {type="item", name="vaterite", amount=20}
             },
             results = {
@@ -1037,7 +1037,7 @@ if mods["space-age"] then
             ingredients = {
                 {type="item", name="ai-girlfriend", amount=1},
                 {type="item", name="random-number-nullifier", amount=1},
-                {type="item", name=mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", amount=1}
+                {type="item", name=mods["IfNickelMk2"] and "perpendicular-processor" or "logic-deregulator", amount=1}
             },
             results = {
                 {type="item", name="dormant-newtronic-chip", amount=1},
@@ -1047,13 +1047,13 @@ if mods["space-age"] then
         },
     })
 
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         data:extend({
             {
                 type = "recipe",
                 name = "mutagenic-sludge-obliteration",
                 category = "organic",
-                icon = "__LasingAround__/graphics/icons/mutagenic-sludge-obliteration.png",
+                icon = "__LasingAroundMk2__/graphics/icons/mutagenic-sludge-obliteration.png",
                 icon_size = 64,
                 subgroup = "original-dint",
                 order = "za", --planning!
@@ -1073,7 +1073,7 @@ if mods["space-age"] then
                 type = "recipe",
                 name = "catastrophe-aversion",
                 category = "organic",
-                icon = "__LasingAround__/graphics/icons/catastrophe-aversion.png",
+                icon = "__LasingAroundMk2__/graphics/icons/catastrophe-aversion.png",
                 icon_size = 64,
                 subgroup = "original-dint",
                 order = "zb",
@@ -1185,7 +1185,7 @@ if mods["space-age"] then
         })
     end
 
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         data:extend({
             {
                 type = "recipe",
@@ -1222,12 +1222,12 @@ if mods["space-age"] then
         rm.AddIngredient("ai-girlfriend", "clumsy-piston", 2)
     end
 
-    if mods["BrimStuff"] and (mods["BrassTacks"] or mods["IfNickel"]) then
+    if mods["BrimStuffMk2"] and (mods["BrassTacksMk2"] or mods["IfNickelMk2"]) then
         data:extend({
             {
                 type = "recipe",
                 name = "robot-estrogen",
-                icon = "__LasingAround__/graphics/icons/robot-estrogen.png",
+                icon = "__LasingAroundMk2__/graphics/icons/robot-estrogen.png",
                 icon_size = 64,
                 subgroup = "inversion",
                 order = "z",

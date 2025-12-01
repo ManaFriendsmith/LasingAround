@@ -12,6 +12,6 @@ if misc.difficulty == 3 then
     rm.AddIngredient("aop-greenhouse", "ai-girlfriend", 10)
     tm.AddPrerequisite("aop-greenhouse", "waifugenesis")
 
-    rm.AddIngredient("aop-hydraulic-facility", mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator", 20)
-    tm.AddPrerequisite("aop-hydraulics", mods["IfNickel"] and "geometry-abolition" or "laissez-faire-mathematics")
+    rm.AddIngredient("aop-hydraulic-facility", mods["IfNickelMk2"] and "perpendicular-processor" or "logic-deregulator", 20)
+    tm.AddPrerequisite("aop-hydraulics", mods["IfNickelMk2"] and "geometry-abolition" or "laissez-faire-mathematics")
 end

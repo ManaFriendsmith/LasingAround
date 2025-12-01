@@ -253,7 +253,7 @@ local function make_laser_recipe_icon(recipe, position, is_space)
     end
   end end
   table.insert(starting_icon, {
-    icon = is_space and "__space-exploration-graphics__/graphics/icons/astronomic/planet-orbit.png" or "__LasingAround__/graphics/icons/laser-modifier.png",
+    icon = is_space and "__space-exploration-graphics__/graphics/icons/astronomic/planet-orbit.png" or "__LasingAroundMk2__/graphics/icons/laser-modifier.png",
     icon_size = 64,
     scale = 0.25,
     shift = table.deepcopy(position)

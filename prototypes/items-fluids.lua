@@ -13,7 +13,7 @@ data:extend({
     {
       type = "fluid",
       name = "helium",
-      icon = "__LasingAround__/graphics/icons/helium.png",
+      icon = "__LasingAroundMk2__/graphics/icons/helium.png",
       icon_size = 64,
       subgroup = "fluid",
       order = "a[fluid]-f",
@@ -37,17 +37,17 @@ data:extend({
     {
         type = "item",
         name = "laser",
-        icon = "__LasingAround__/graphics/icons/laser.png",
+        icon = "__LasingAroundMk2__/graphics/icons/laser.png",
         icon_size = 64,
         pictures = {
           layers = {
             {
               size = 64,
-              filename = "__LasingAround__/graphics/icons/laser.png",
+              filename = "__LasingAroundMk2__/graphics/icons/laser.png",
               scale = 0.5
             },
             {
-              filename = "__LasingAround__/graphics/icons/laser-glow.png",
+              filename = "__LasingAroundMk2__/graphics/icons/laser-glow.png",
               size = 64,
               scale = 0.5,
               draw_as_light = true
@@ -66,7 +66,7 @@ data:extend({
     {
         type = "item",
         name = "spectroscope",
-        icon = "__LasingAround__/graphics/icons/spectroscope.png",
+        icon = "__LasingAroundMk2__/graphics/icons/spectroscope.png",
         icon_size = 64,
         subgroup = mods["space-age"] and "fulgora-processes" or "intermediate-product",
         order = mods["space-age"] and "b[holmium]-ga" or "c[advanced-intermediates]-d3",
@@ -80,7 +80,7 @@ data:extend({
 })
 
 --It's not generally kosher to do this before data-updates but we need to get there before barrel recipes get generated.
-data.raw.fluid["crude-oil"].icon = "__LasingAround__/graphics/icons/crude-oil.png"
+data.raw.fluid["crude-oil"].icon = "__LasingAroundMk2__/graphics/icons/crude-oil.png"
 data.raw.fluid["crude-oil"].flow_color = {r=0.5, g=0.35, b=0.2}
 data.raw.fluid["crude-oil"].base_color = {r=0.25, g=0.15, b=0.0}
 
@@ -96,7 +96,7 @@ data:extend({
     {
         type = "item",
         name = "scanner",
-        icon = "__LasingAround__/graphics/icons/scanner.png",
+        icon = "__LasingAroundMk2__/graphics/icons/scanner.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "c[advanced-intermediates]-d2",
@@ -109,18 +109,18 @@ data:extend({
     }
 })
 
-if mods["IfNickel"] and not mods["space-age"] then
+if mods["IfNickelMk2"] and not mods["space-age"] then
   data:extend({
     {
       type = "item",
       name = "micron-tolerance-components",
-      icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+      icon = "__LasingAroundMk2__/graphics/icons/micron-tolerance-components.png",
       pictures =
       {
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-1.png", scale = 0.25},
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-2.png", scale = 0.25},
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-3.png", scale = 0.25},
-        { size = 64, filename = "__LasingAround__/graphics/icons/micron-tolerance-components-4.png", scale = 0.25}
+        { size = 64, filename = "__LasingAroundMk2__/graphics/icons/micron-tolerance-components-1.png", scale = 0.25},
+        { size = 64, filename = "__LasingAroundMk2__/graphics/icons/micron-tolerance-components-2.png", scale = 0.25},
+        { size = 64, filename = "__LasingAroundMk2__/graphics/icons/micron-tolerance-components-3.png", scale = 0.25},
+        { size = 64, filename = "__LasingAroundMk2__/graphics/icons/micron-tolerance-components-4.png", scale = 0.25}
       },
       icon_size = 64,
       subgroup = "intermediate-product",
@@ -140,17 +140,17 @@ if data.raw.item["transceiver"] and data.raw.item["gyro"] then
     {
       type = "item",
       name = "tracker",
-      icon = "__LasingAround__/graphics/icons/tracker.png",
+      icon = "__LasingAroundMk2__/graphics/icons/tracker.png",
       icon_size = 64,
       pictures = {
         layers = {
           {
             size = 64,
-            filename = "__LasingAround__/graphics/icons/tracker.png",
+            filename = "__LasingAroundMk2__/graphics/icons/tracker.png",
             scale = 0.5
           },
           {
-            filename = "__LasingAround__/graphics/icons/tracker-glow.png",
+            filename = "__LasingAroundMk2__/graphics/icons/tracker-glow.png",
             size = 64,
             scale = 0.5,
             draw_as_light = true
@@ -174,17 +174,17 @@ if mods["space-age"] then
         {
             type = "item",
             name = "weird-alien-gizmo",
-            icon = "__LasingAround__/graphics/icons/weird-alien-gizmo.png",
+            icon = "__LasingAroundMk2__/graphics/icons/weird-alien-gizmo.png",
             icon_size = 64,
             pictures = {
                 layers = {
                   {
                     size = 64,
-                    filename = "__LasingAround__/graphics/icons/weird-alien-gizmo.png",
+                    filename = "__LasingAroundMk2__/graphics/icons/weird-alien-gizmo.png",
                     scale = 0.5
                   },
                   {
-                    filename = "__LasingAround__/graphics/icons/weird-alien-gizmo-glow.png",
+                    filename = "__LasingAroundMk2__/graphics/icons/weird-alien-gizmo-glow.png",
                     size = 128,
                     scale = 0.5,
                     draw_as_light = true
@@ -219,7 +219,7 @@ if mods["space-age"] then
         {
             type = "item",
             name = "cardinal-grammeter",
-            icon = "__LasingAround__/graphics/icons/cardinal-grammeter.png",
+            icon = "__LasingAroundMk2__/graphics/icons/cardinal-grammeter.png",
             icon_size = 64,
             subgroup = "fulgora-processes",
             order = "b[holmium]-g",
@@ -233,18 +233,18 @@ if mods["space-age"] then
         {
           type = "item",
           name = "antimatter-power-cell",
-          icon = "__LasingAround__/graphics/icons/antimatter-power-cell.png",
+          icon = "__LasingAroundMk2__/graphics/icons/antimatter-power-cell.png",
           icon_size = 64,
           subgroup = "inversion",
           pictures = {
             layers = {
               {
                 size = 64,
-                filename = "__LasingAround__/graphics/icons/antimatter-power-cell.png",
+                filename = "__LasingAroundMk2__/graphics/icons/antimatter-power-cell.png",
                 scale = 0.5
               },
               {
-                filename = "__LasingAround__/graphics/icons/antimatter-power-cell-glow.png",
+                filename = "__LasingAroundMk2__/graphics/icons/antimatter-power-cell-glow.png",
                 size = 128,
                 scale = 0.5,
                 draw_as_light = true
@@ -272,7 +272,7 @@ if mods["space-age"] then
         {
           type = "item",
           name = "high-density-chaos",
-          icon = "__LasingAround__/graphics/icons/high-density-chaos.png",
+          icon = "__LasingAroundMk2__/graphics/icons/high-density-chaos.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "c",
@@ -286,7 +286,7 @@ if mods["space-age"] then
         {
           type = "item",
           name = "random-number-nullifier",
-          icon = "__LasingAround__/graphics/icons/random-number-nullifier.png",
+          icon = "__LasingAroundMk2__/graphics/icons/random-number-nullifier.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "d",
@@ -300,7 +300,7 @@ if mods["space-age"] then
         {
           type = "item",
           name = "weighted-blanket",
-          icon = "__LasingAround__/graphics/icons/weighted-blanket.png",
+          icon = "__LasingAroundMk2__/graphics/icons/weighted-blanket.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "e",
@@ -314,7 +314,7 @@ if mods["space-age"] then
         {
           type = "item",
           name = "ordinary-human-brain",
-          icon = "__LasingAround__/graphics/icons/ordinary-human-brain.png",
+          icon = "__LasingAroundMk2__/graphics/icons/ordinary-human-brain.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "f",
@@ -330,17 +330,17 @@ if mods["space-age"] then
         {
           type = "item",
           name = "ai-girlfriend",
-          icon = "__LasingAround__/graphics/icons/ai-girlfriend.png",
+          icon = "__LasingAroundMk2__/graphics/icons/ai-girlfriend.png",
           icon_size = 64,
           pictures = {
             layers = {
               {
                 size = 64,
-                filename = "__LasingAround__/graphics/icons/ai-girlfriend.png",
+                filename = "__LasingAroundMk2__/graphics/icons/ai-girlfriend.png",
                 scale = 0.5
               },
               {
-                filename = "__LasingAround__/graphics/icons/ai-girlfriend-glow.png",
+                filename = "__LasingAroundMk2__/graphics/icons/ai-girlfriend-glow.png",
                 size = 64,
                 scale = 0.5,
                 draw_as_light = true
@@ -359,7 +359,7 @@ if mods["space-age"] then
         {
           type = "item",
           name = "dormant-newtronic-chip",
-          icon = "__LasingAround__/graphics/icons/dormant-newtronic-chip.png",
+          icon = "__LasingAroundMk2__/graphics/icons/dormant-newtronic-chip.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "i",
@@ -375,17 +375,17 @@ if mods["space-age"] then
         {
           type = "item",
           name = "pulsing-newtronic-chip",
-          icon = "__LasingAround__/graphics/icons/pulsing-newtronic-chip.png",
+          icon = "__LasingAroundMk2__/graphics/icons/pulsing-newtronic-chip.png",
           icon_size = 64,
           pictures = {
             layers = {
               {
                 size = 64,
-                filename = "__LasingAround__/graphics/icons/pulsing-newtronic-chip.png",
+                filename = "__LasingAroundMk2__/graphics/icons/pulsing-newtronic-chip.png",
                 scale = 0.5
               },
               {
-                filename = "__LasingAround__/graphics/icons/pulsing-newtronic-chip-glow.png",
+                filename = "__LasingAroundMk2__/graphics/icons/pulsing-newtronic-chip-glow.png",
                 size = 64,
                 scale = 0.5,
                 draw_as_light = true
@@ -405,12 +405,12 @@ if mods["space-age"] then
         }
     })
 
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
       data:extend({
         {
           type = "item",
           name = "art-rotators",
-          icon = "__LasingAround__/graphics/icons/art-rotators.png",
+          icon = "__LasingAroundMk2__/graphics/icons/art-rotators.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "a",
@@ -424,17 +424,17 @@ if mods["space-age"] then
         {
           type = "item",
           name = "perpendicular-processor",
-          icon = "__LasingAround__/graphics/icons/perpendicular-processor.png",
+          icon = "__LasingAroundMk2__/graphics/icons/perpendicular-processor.png",
           icon_size = 64,
           pictures = {
             layers = {
               {
                 size = 64,
-                filename = "__LasingAround__/graphics/icons/perpendicular-processor.png",
+                filename = "__LasingAroundMk2__/graphics/icons/perpendicular-processor.png",
                 scale = 0.5
               },
               {
-                filename = "__LasingAround__/graphics/icons/perpendicular-processor-glow.png",
+                filename = "__LasingAroundMk2__/graphics/icons/perpendicular-processor-glow.png",
                 size = 64,
                 scale = 0.5,
                 draw_as_light = true
@@ -456,7 +456,7 @@ if mods["space-age"] then
         {
           type = "item",
           name = "pentapod-gatekeeper",
-          icon = "__LasingAround__/graphics/icons/pentapod-gatekeeper.png",
+          icon = "__LasingAroundMk2__/graphics/icons/pentapod-gatekeeper.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "a",
@@ -470,7 +470,7 @@ if mods["space-age"] then
         {
           type = "item",
           name = "logic-deregulator",
-          icon = "__LasingAround__/graphics/icons/logic-deregulator.png",
+          icon = "__LasingAroundMk2__/graphics/icons/logic-deregulator.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "b",
@@ -484,12 +484,12 @@ if mods["space-age"] then
       })
     end
 
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
       data:extend({
         {
           type = "item",
           name = "clumsy-piston",
-          icon = "__LasingAround__/graphics/icons/clumsy-piston.png",
+          icon = "__LasingAroundMk2__/graphics/icons/clumsy-piston.png",
           icon_size = 64,
           subgroup = "inversion",
           order = "g",

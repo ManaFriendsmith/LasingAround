@@ -1,10 +1,11 @@
 {
-  "name": "LasingAround",
+  "name": "LasingAroundMk2",
   "version": "2.0.0",
-  "title": "Lasing Around",
+  "title": "Lasing Around Mk. 2",
   "author": "planetfall",
   "homepage": "",
-  "description": "Adds helium and laser-related intermediates, and a side-grade to assembling machines.",
+  "source": "https://github.com/ManaFriendsmith/LasingAroundMk2",
+  "description": "More Materials: Helium and lasers.",
   "factorio_version": "2.0",
-  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacks", "? IfNickel", "? ThemTharHills", "? BrimStuff", "? Paracelsin", "? castra", "? LunarLandings"]
+  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacksMk2", "? IfNickelMk2", "? ThemTharHillsMk2", "? BrimStuffMk2", "? Paracelsin", "? castra", "? LunarLandings"]
 }

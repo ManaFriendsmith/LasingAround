@@ -133,7 +133,7 @@ if mods["LunarLandings"] then
                     end
                 end
                 table.insert(new_recipe.icons, {
-                    icon = "__LasingAround__/graphics/icons/micron-tolerance-components.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/micron-tolerance-components.png",
                     icon_size = 64,
                     scale = 0.25,
                     shift = {-8, -8}
@@ -256,7 +256,7 @@ if mods["maraxsis"] then
 end
 
 if mods["Paracelsin"] then
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         data.raw.technology["a-world-with-substantially-less-zinc"].localised_name = {"technology-name.glacite-resonance"}
         data.raw.recipe["galvaser"].localised_name = {"recipe-name.glaser"}
         SetItemCost("pcl-zinc-plate", 2)
@@ -299,12 +299,12 @@ if mods["castra"] then
         tm.AddSciencePack("portable-fusion-reactor", "battlefield-science-pack")
     end
 
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         rm.AddProduct("custom-ancient-military-wreckage-recycling", {type="item", name="laser", amount=1, probability=0.005})
     end
 
     SetItemCost("millerite", 1)
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         SetItemCost("cst-nickel-plate", 1)
     else
         SetItemCost("nickel-plate", 1)

@@ -1,23 +1,23 @@
 local parts = {}
 
 parts.heavyGyro = false
-if mods["BrassTacks"] and settings.startup["brasstacks-experimental-intermediates"].value and (settings.startup["brasstacks-gyro-override"].value or not mods["bzsilicon"]) then
+if mods["BrassTacksMk2"] and settings.startup["brasstacks-experimental-intermediates"].value and (settings.startup["brasstacks-gyro-override"].value or not mods["bzsilicon"]) then
   parts.heavyGyro = true
 end
 
-parts.brassExperiment = mods["BrassTacks"] and settings.startup["brasstacks-experimental-intermediates"].value
-parts.nickelExperiment = mods["IfNickel"] and settings.startup["ifnickel-experimental-intermediates"].value
+parts.brassExperiment = mods["BrassTacksMk2"] and settings.startup["brasstacks-experimental-intermediates"].value
+parts.nickelExperiment = mods["IfNickelMk2"] and settings.startup["ifnickel-experimental-intermediates"].value
 
 function parts.qualityIconPath(mod, icon)
   local prefix = ""
   --I intend to reuse this function between mods, hence checking for itself and specifying which mod to look in.
   --Other mods may add an alternate recipe and need to look up an icon, etc.
   --Possible that I am over-engineering this system.
-  if mod == "brasstacks" and mods["BrassTacks"] then
+  if mod == "brasstacks" and mods["BrassTacksMk2"] then
     if settings.startup["brasstacks-classic-icons"].value then
-      prefix = "__BrassTacks__/graphics/classic/"
+      prefix = "__BrassTacksMk2__/graphics/classic/"
     else
-      prefix = "__BrassTacks__/graphics/galdoc/"
+      prefix = "__BrassTacksMk2__/graphics/galdoc/"
     end
   end
   if prefix ~= "" then

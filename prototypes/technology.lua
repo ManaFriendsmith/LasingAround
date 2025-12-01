@@ -5,7 +5,7 @@ data:extend({
     {
         type = "technology",
         name = "laser-mill",
-        icon = "__LasingAround__/graphics/technology/laser-mill.png",
+        icon = "__LasingAroundMk2__/graphics/technology/laser-mill.png",
         icon_size = 256,
         effects = {
             {
@@ -40,7 +40,7 @@ data:extend({
     {
         type = "technology",
         name = "spectroscopy",
-        icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+        icon = "__LasingAroundMk2__/graphics/technology/spectroscopy.png",
         icon_size = 256,
         effects = {
             {
@@ -123,11 +123,11 @@ else
             name = "spectroscopic-petrochemistry",
             icons = {
               {
-                icon = "__LasingAround__/graphics/technology/helium-extraction.png",
+                icon = "__LasingAroundMk2__/graphics/technology/helium-extraction.png",
                 icon_size = 256
               },
               {
-                icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+                icon = "__LasingAroundMk2__/graphics/technology/spectroscopy.png",
                 icon_size = 256,
                 scale = 0.25,
                 shift = {-32, -32}
@@ -163,7 +163,7 @@ else
                 icon_size = 256
               },
               {
-                icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+                icon = "__LasingAroundMk2__/graphics/technology/spectroscopy.png",
                 icon_size = 256,
                 scale = 0.25,
                 shift = {-32, -32}
@@ -198,7 +198,7 @@ else
                 icon_size = 256
               },
               {
-                icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+                icon = "__LasingAroundMk2__/graphics/technology/spectroscopy.png",
                 icon_size = 256,
                 scale = 0.25,
                 shift = {-32, -32}
@@ -234,7 +234,7 @@ if data.raw.item["tracker"] then
         {
             type = "technology",
             name = "tracking-systems",
-            icon = "__LasingAround__/graphics/technology/tracking-systems.png",
+            icon = "__LasingAroundMk2__/graphics/technology/tracking-systems.png",
             icon_size = 256,
             effects = {
                 {
@@ -266,7 +266,7 @@ if data.raw.item["tracker"] then
                     icon_size = 256
                 },
                 {
-                    icon = "__LasingAround__/graphics/icons/tracker.png",
+                    icon = "__LasingAroundMk2__/graphics/icons/tracker.png",
                     icon_size = 64,
                     shift = {-64, -64},
                     scale = 1
@@ -302,12 +302,12 @@ if data.raw.item["tracker"] then
     end
 end
 
-if mods["IfNickel"] and not mods["space-age"] then
+if mods["IfNickelMk2"] and not mods["space-age"] then
     data:extend({
         {
             type = "technology",
             name = "micron-tolerance-manufacturing",
-            icon = "__LasingAround__/graphics/technology/micron-tolerance-manufacturing.png",
+            icon = "__LasingAroundMk2__/graphics/technology/micron-tolerance-manufacturing.png",
             icon_size = 256,
             effects = {
                 {
@@ -329,12 +329,12 @@ if mods["IfNickel"] and not mods["space-age"] then
     })
 end
 
-if data.raw.item["mutagenic-sludge"] and not mods["BrimStuff"] then
+if data.raw.item["mutagenic-sludge"] and not mods["BrimStuffMk2"] then
     data:extend({
         {
             type = "technology",
             name = "advanced-ethics",
-            icon = "__LasingAround__/graphics/technology/advanced-ethics.png",
+            icon = "__LasingAroundMk2__/graphics/technology/advanced-ethics.png",
             icon_size = 256,
             effects = {
                 {
@@ -369,7 +369,7 @@ if mods["space-age"] and misc.difficulty == 3 then
         {
             type = "technology",
             name = "antiparticle-decelerator",
-            icon = "__LasingAround__/graphics/technology/antiparticle-decelerator.png",
+            icon = "__LasingAroundMk2__/graphics/technology/antiparticle-decelerator.png",
             icon_size = 256,
             effects = {
                 {
@@ -397,7 +397,7 @@ if mods["space-age"] and misc.difficulty == 3 then
         {
             type = "technology",
             name = "probability-manipulation",
-            icon = "__LasingAround__/graphics/technology/probability-manipulation.png",
+            icon = "__LasingAroundMk2__/graphics/technology/probability-manipulation.png",
             icon_size = 256,
             effects = {
                 {
@@ -429,21 +429,21 @@ if mods["space-age"] and misc.difficulty == 3 then
         },
         {
             type = "technology",
-            name = mods["IfNickel"] and "geometry-abolition" or "laissez-faire-mathematics",
-            icon = mods["IfNickel"] and "__LasingAround__/graphics/technology/geometry-abolition.png" or "__LasingAround__/graphics/technology/laissez-faire-mathematics.png",
+            name = mods["IfNickelMk2"] and "geometry-abolition" or "laissez-faire-mathematics",
+            icon = mods["IfNickelMk2"] and "__LasingAroundMk2__/graphics/technology/geometry-abolition.png" or "__LasingAroundMk2__/graphics/technology/laissez-faire-mathematics.png",
             icon_size = 256,
             effects = {
                 {
                     type = "unlock-recipe",
-                    recipe = mods["IfNickel"] and "art-rotators" or "pentapod-gatekeeper"
+                    recipe = mods["IfNickelMk2"] and "art-rotators" or "pentapod-gatekeeper"
                 },
                 {
                     type = "unlock-recipe",
-                    recipe = mods["IfNickel"] and "art-rotator-inversion" or "pentapod-gatekeeper-inversion"
+                    recipe = mods["IfNickelMk2"] and "art-rotator-inversion" or "pentapod-gatekeeper-inversion"
                 },
                 {
                     type = "unlock-recipe",
-                    recipe = mods["IfNickel"] and "perpendicular-processor" or "logic-deregulator"
+                    recipe = mods["IfNickelMk2"] and "perpendicular-processor" or "logic-deregulator"
                 }
             },
             prerequisites = {"antiparticle-decelerator", "agricultural-science-pack"},
@@ -463,7 +463,7 @@ if mods["space-age"] and misc.difficulty == 3 then
         {
             type = "technology",
             name = "waifugenesis",
-            icon = "__LasingAround__/graphics/technology/waifugenesis.png",
+            icon = "__LasingAroundMk2__/graphics/technology/waifugenesis.png",
             icon_size = 256,
             effects = {
                 {
@@ -524,17 +524,17 @@ if mods["space-age"] and misc.difficulty == 3 then
         }
     })
 
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         tm.AddUnlock("waifugenesis", "clumsy-piston", "-ai-girlfriend")
         tm.AddUnlock("waifugenesis", "clumsy-piston-inversion", "-ai-girlfriend")
     end
 
-    if mods["BrimStuff"] and (mods["BrassTacks"] or mods["IfNickel"]) then
+    if mods["BrimStuffMk2"] and (mods["BrassTacksMk2"] or mods["IfNickelMk2"]) then
         data:extend({
             {
                 type = "technology",
                 name = "robot-estrogen",
-                icon = "__LasingAround__/graphics/technology/robot-estrogen.png",
+                icon = "__LasingAroundMk2__/graphics/technology/robot-estrogen.png",
                 icon_size = 256,
                 effects = {
                     {
@@ -865,7 +865,7 @@ if mods["castra"] then
                     icon_size = 256
                 },
                 {
-                    icon = "__LasingAround__/graphics/technology/spectroscopy.png",
+                    icon = "__LasingAroundMk2__/graphics/technology/spectroscopy.png",
                     icon_size = 256,
                     scale = 0.25,
                     shift = {-32, -32}

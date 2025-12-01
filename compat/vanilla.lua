@@ -91,7 +91,7 @@ if data.raw.item["tracker"] and data.raw.item["skyseeker-armature"] then
 end
 
 if data.raw.item["micron-tolerance-components"] and not mods["LunarLandings"] then
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         rm.ReplaceIngredientProportional("express-gearbox", "iron-gear-wheel", "micron-tolerance-components")
         tm.AddPrerequisite("production-science-pack", "micron-tolerance-manufacturing")
     end
@@ -119,13 +119,13 @@ if misc.difficulty > 1 then
 end
 
 if data.raw.item["micron-tolerance-components"] then
-    if not mods["BrassTacks"] and not mods["LunarLandings"] then
+    if not mods["BrassTacksMk2"] and not mods["LunarLandings"] then
         rm.AddIngredient("express-belt", "micron-tolerance-components", 1)
         rm.AddIngredient("express-underground-belt", "micron-tolerance-components", 8)
         rm.AddIngredient("express-splitter", "micron-tolerance-components", 10)
         tm.AddPrerequisite("logistics-3", "micron-tolerance-manufacturing")
     end
-    if not (mods["BrassTacks"] or mods["IfNickel"]) then
+    if not (mods["BrassTacksMk2"] or mods["IfNickelMk2"]) then
         rm.AddIngredient("stack-inserter", "micron-tolerance-components", 10)
     end
 end
@@ -182,7 +182,7 @@ rm.RemoveIngredient("beacon", "advanced-circuit", 10)
 rm.RemoveIngredient("beacon", "integrated-circuit", 20)
 
 if data.raw.item["micron-tolerance-components"] and not mods["LunarLandings"] then
-    if not mods["BrassTacks"] then
+    if not mods["BrassTacksMk2"] then
         rm.AddIngredient("assembling-machine-3", "micron-tolerance-components", 10)
         tm.AddPrerequisite("logistics-3", "micron-tolerance-manufacturing")
     end

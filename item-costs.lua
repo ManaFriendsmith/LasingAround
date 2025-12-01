@@ -24,7 +24,7 @@ SetItemCost("copper-ore", 1)
 SetItemCost("copper-plate", 1)
 
 SetItemCost("plastic-bar", 1)
-SetItemCost("sulfur", mods["BrimStuff"] and 1 or 1.5)
+SetItemCost("sulfur", mods["BrimStuffMk2"] and 1 or 1.5)
 SetItemCost("solid-fuel", 1)
 
 SetItemCost("sulfuric-acid", 0.15)
