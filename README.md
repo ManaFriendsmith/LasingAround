@@ -12,11 +12,11 @@ This is a mod for Factorio blah blah blah write this later. It adds resources an
 
 There are two ways to control the difficulty: a global setting that's part of pf-functions (increases the **depth** of the crafting tree) and adding more mods (increases the **breadth** of the crafting tree). Any combination of these mods should work; please report if there is an error or a softlock.
 
-- [Brass Tacks](https://github.com/ManaFriendsmith/BrassTacks) - Adds zinc and brass. Mechanical parts and galvanized items. Heavily affects Vulcanus, Fulgora.
-- [If I Had A Nickel](https://github.com/ManaFriendsmith/IfNickel) - Adds nickel and invar. Motors, valves, rocket engines. Heavily affects Vulcanus, Gleba.
-- [Them Thar Hills](https://github.com/ManaFriendsmith/ThemTharHills) - Adds gold. Electronic components. Heavily affects all inner planets.
-- [BrimStuff](https://github.com/ManaFriendsmith/BrimStuff) - Reworks sulfur and chemistry. Rubber, explosives, waste processing. Heavily affects all planets + space platforms.
-- [LasingAround](https://github.com/ManaFriendsmith/LasingAround) - Adds helium. Lasers and advanced crafting machines. Heavily affects Nauvis, Fulgora, Aquilo.
+- [Brass Tacks](https://github.com/ManaFriendsmith/BrassTacksMk2) - Adds zinc and brass. Mechanical parts and galvanized items. Heavily affects Vulcanus, Fulgora.
+- [If I Had A Nickel](https://github.com/ManaFriendsmith/IfNickelMk2) - Adds nickel and invar. Motors, valves, rocket engines. Heavily affects Vulcanus, Gleba.
+- [Them Thar Hills](https://github.com/ManaFriendsmith/ThemTharHillsMk2) - Adds gold. Electronic components. Heavily affects all inner planets.
+- [BrimStuff](https://github.com/ManaFriendsmith/BrimStuffMk2) - Reworks sulfur and chemistry. Rubber, explosives, waste processing. Heavily affects all planets + space platforms.
+- [LasingAround](https://github.com/ManaFriendsmith/LasingAroundMk2) - Adds helium. Lasers and advanced crafting machines. Heavily affects Nauvis, Fulgora, Aquilo.
 
 # RELATED
 
