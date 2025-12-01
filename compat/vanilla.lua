@@ -15,8 +15,13 @@ tm.AddPrerequisite("laser", "advanced-oil-processing")
 tm.RemovePrerequisite("laser", "chemical-science-pack")
 tm.AddUnlock("laser", "laser")
 
-tm.AddPrerequisite("utility-science-pack", "laser")
-rm.ReplaceIngredientProportional("utility-science-pack", "processing-unit", "scanner", 1)
+if misc.difficulty > 1 then
+    tm.AddPrerequisite("utility-science-pack", "laser")
+    rm.ReplaceIngredientProportional("utility-science-pack", "processing-unit", "scanner", 1)
+    if mods["maraxsis"] then
+        rm.ReplaceIngredientProportional("maraxsis-deepsea-research-utility-science-pack", "processing-unit", "scanner", 1)
+    end
+end
 
 if mods["space-age"] then
     if data.raw.item["rocket-control-unit"] then
@@ -32,20 +37,24 @@ if mods["space-age"] then
         rm.AddIngredient("maraxsis-rocket-part", "laser", mods["planet-muluna"] and 2 or 1)
     end
 else
-    if data.raw.item["rocket-control-unit"] then
-        if data.raw.item["tracker"] then
-            rm.AddIngredient("rocket-control-unit", "tracker", 1)
-            rm.RemoveIngredient("rocket-control-unit", "gyro", 99999)
-            rm.RemoveIngredient("rocket-control-unit", "transceiver", 99999)
+    if not mods["LunarLandings"] then
+        if data.raw.item["rocket-control-unit"] then
+            if data.raw.item["tracker"] then
+                rm.AddIngredient("rocket-control-unit", "tracker", 1)
+                rm.RemoveIngredient("rocket-control-unit", "gyro", 99999)
+                rm.RemoveIngredient("rocket-control-unit", "transceiver", 99999)
+            else
+                rm.AddIngredient("rocket-control-unit", "laser", 1)
+            end
+        elseif data.raw.item["tracker"] then
+            rm.AddIngredient("rocket-part", "laser", 5)
         else
-            rm.AddIngredient("rocket-control-unit", "laser", 1)
+            rm.AddIngredient("rocket-part", "laser", 5)
         end
-    else
-        rm.AddIngredient("rocket-part", "laser", 5)
-    end
 
-    rm.AddIngredient("satellite", "spectroscope", 100)
-    tm.AddPrerequisite("space-science-pack", "spectroscopy")
+        rm.AddIngredient("satellite", "spectroscope", 100)
+        tm.AddPrerequisite("space-science-pack", "spectroscopy")
+    end
 end
 
 if misc.difficulty > 1 then
@@ -58,24 +67,30 @@ rm.AddLaserMillData("copper-cable", {helium=-1}, {helium=-1})
 rm.AddLaserMillData("barrel", {helium=-1}, {helium=-1})
 rm.AddLaserMillData("electronic-circuit", {helium=-1}, {helium=-1})
 rm.AddLaserMillData("advanced-circuit", {helium=-1}, {helium=-1})
-rm.AddLaserMillData("processing-unit", {helium=-1, unlock="processing-unit"}, {helium=-1, prod_research={"processing-unit-productivity", 0.1}})
+rm.AddLaserMillData("processing-unit", false, {helium=-1, prod_research={"processing-unit-productivity", 0.1}, icon_offset=mods["LunarLandings"] and {8, -8} or {-8, -8}})
 rm.AddLaserMillData("battery", {helium=-1}, {helium=-1})
 
-rm.AddLaserMillData("low-density-structure", {helium=-1.4, convert=true}, {helium=-1, prod_research={"low-density-structure-productivity", 0.1}})
+rm.AddLaserMillData("low-density-structure", {helium=-1.4, convert=not mods["LunarLandings"]}, {helium=-1, prod_research={"low-density-structure-productivity", 0.1}})
 rm.AddLaserMillData("engine-unit", false, {helium=-1})
 rm.AddLaserMillData("electric-engine-unit", false, {helium=-1})
 rm.AddLaserMillData("flying-robot-frame", false, {helium=-1})
 
-if not mods["space-age"] then
+if not mods["space-age"] and not mods["LunarLandings"] then
     tm.RemovePrerequisite("low-density-structure", "chemical-science-pack")
     tm.AddPrerequisite("low-density-structure", "laser-mill")
 end
 
-if data.raw.item["tracker"] then
+if data.raw.item["tracker"] and (mods["space-age"] or not mods["LunarLandings"]) then
     tm.AddPrerequisite("rocket-silo", "tracking-systems")
 end
 
-if data.raw.item["micron-tolerance-components"] then
+if data.raw.item["tracker"] and data.raw.item["skyseeker-armature"] then
+    tm.RemoveUnlock("electric-engine", "skyseeker-armature")
+    tm.AddUnlock("tracking-systems", "skyseeker-armature")
+    rm.AddIngredient("skyseeker-armature", "tracker")
+end
+
+if data.raw.item["micron-tolerance-components"] and not mods["LunarLandings"] then
     if mods["BrassTacks"] then
         rm.ReplaceIngredientProportional("express-gearbox", "iron-gear-wheel", "micron-tolerance-components")
         tm.AddPrerequisite("production-science-pack", "micron-tolerance-manufacturing")
@@ -104,7 +119,7 @@ if misc.difficulty > 1 then
 end
 
 if data.raw.item["micron-tolerance-components"] then
-    if not mods["BrassTacks"] then
+    if not mods["BrassTacks"] and not mods["LunarLandings"] then
         rm.AddIngredient("express-belt", "micron-tolerance-components", 1)
         rm.AddIngredient("express-underground-belt", "micron-tolerance-components", 8)
         rm.AddIngredient("express-splitter", "micron-tolerance-components", 10)
@@ -166,7 +181,7 @@ rm.AddIngredient("beacon", "laser", 10)
 rm.RemoveIngredient("beacon", "advanced-circuit", 10)
 rm.RemoveIngredient("beacon", "integrated-circuit", 20)
 
-if data.raw.item["micron-tolerance-components"] then
+if data.raw.item["micron-tolerance-components"] and not mods["LunarLandings"] then
     if not mods["BrassTacks"] then
         rm.AddIngredient("assembling-machine-3", "micron-tolerance-components", 10)
         tm.AddPrerequisite("logistics-3", "micron-tolerance-manufacturing")
@@ -184,8 +199,10 @@ table.insert(data.raw["fluid-turret"]["flamethrower-turret"].attack_parameters.f
 
 if data.raw.item["tracker"] then
     if not mods["space-age"] then
-        rm.ReplaceIngredientProportional("artillery-turret", "advanced-circuit", "tracker")
-        rm.ReplaceIngredientProportional("artillery-wagon", "advanced-circuit", "tracker")
+        if not data.raw.item["skyseeker-armature"] then
+            rm.ReplaceIngredientProportional("artillery-turret", "advanced-circuit", "tracker")
+            rm.ReplaceIngredientProportional("artillery-wagon", "advanced-circuit", "tracker")
+        end
         tm.AddPrerequisite("artillery", "tracking-systems")
         tm.AddPrerequisite("personal-roboport-mk2-equipment", "tracking-systems")
     end
@@ -204,4 +221,5 @@ end
 
 if data.raw.item["tracker"] and rm.GetIngredientCount("atomic-bomb", "rocket-control-unit") == 0 then
     rm.AddIngredient("atomic-bomb", "tracker", 10)
+    tm.AddPrerequisite("atomic-bomb", "tracking-systems")
 end
