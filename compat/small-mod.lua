@@ -8,3 +8,13 @@ if mods["se-space-trains"] and not mods["LunarLandings"] then
         tm.AddPrerequisite("tech-space-trains", "waifugenesis")
     end
 end
+
+if mods["deadlock-beltboxes-loaders"] then
+    if misc.difficulty > 1 then
+        if mods["space-age"] then
+            rm.AddIngredient("turbo-transport-belt-beltbox", "scanner", 5)
+        else
+            rm.AddIngredient("express-transport-belt-beltbox", "scanner", 2)
+        end
+    end
+end
