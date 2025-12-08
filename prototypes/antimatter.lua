@@ -371,7 +371,7 @@ data:extend({
         drop_sound = item_sounds.vehicle_inventory_move,
         stack_size = 1,
         weight = 1000*kg,
-        canonical_recipe = false,
+        auto_recycle = false,
         hidden_in_factoriopedia = true
     },
     {

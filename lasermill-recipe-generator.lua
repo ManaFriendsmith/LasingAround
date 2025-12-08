@@ -415,6 +415,7 @@ for name, recipe in pairs(data.raw.recipe) do
 
         --log("generating laser mill recipe: " .. recipe_copy.name)
 
+        recipe_copy.auto_recycle = false
         table.insert(new_recipes, recipe_copy)
       end
     end

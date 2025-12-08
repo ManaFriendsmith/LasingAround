@@ -19,6 +19,7 @@ data:extend({
             {type="fluid", name="filtered-oil", amount=50, fluidbox_index=1}
         },
         allow_quality = false,
+        auto_recycle = false,
         crafting_machine_tint = {
             primary = {0.1, 0.1, 0.1, 1},
             secondary = {0.9, 0.9, 0.9, 1},
@@ -36,6 +37,7 @@ data:extend({
         order = "b",
         category = "chemistry",
         enabled = false,
+        auto_recycle = false,
         energy_required = 1,
         ingredients = {
             {type="fluid", name="crude-oil", amount=50},
@@ -74,6 +76,7 @@ data:extend({
         order = "c",
         category = "oil-processing",
         enabled = false,
+        auto_recycle = false,
         energy_required = 2,
         ingredients = {
             {type="fluid", name="crude-oil", amount=100},
@@ -99,6 +102,7 @@ data:extend({
         order = "d",
         category = "chemistry",
         enabled = false,
+        auto_recycle = false,
         energy_required = 0.5,
         ingredients = {{type="fluid", name="helium", amount=100}},
         emissions_multiplier = 0.01,
@@ -186,6 +190,7 @@ if mods["LunarLandings"] then
                 {type="item", name="ll-moon-rock", amount_min=6, amount_max=9, ignored_by_productivity=9},
                 {type="fluid", name="helium", amount=20, fluidbox_index=1}
             },
+            auto_recycle = false,
             energy_required = 10,
             enabled = false
         },
@@ -206,6 +211,7 @@ if mods["LunarLandings"] then
                 shift = {-8, -8}
                 }
             },
+            auto_recycle = false,
             energy_required = 60,
             allow_decomposition = false,
             ingredients = {
@@ -262,6 +268,7 @@ if mods["space-age"] then
                 {type="item", name="copper-ore", amount=1, probability=0.2},
                 {type="item", name="spectroscope", amount=1, probability=0.99, ignored_by_stats=1, ignored_by_productivity=1}
             },
+            auto_recycle = false,
             energy_required = 20,
             allow_productivity = true,
             enabled = false
@@ -295,6 +302,7 @@ if mods["space-age"] then
                 {type="item", name="spoilage", amount=5},
                 {type="item", name="spectroscope", amount=1, probability=0.99, ignored_by_stats=1, ignored_by_productivity=1}
             },
+            auto_recycle = false,
             energy_required = 20,
             allow_productivity = true,
             enabled = false
@@ -325,6 +333,7 @@ if mods["space-age"] then
             results = {
                 {type="item", name="laser", amount=1}
             },
+            auto_recycle = false,
             energy_required = 16,
             allow_productivity = true,
             enabled = false
@@ -354,6 +363,7 @@ if mods["space-age"] then
             results = {
                 {type="item", name="laser", amount=1}
             },
+            auto_recycle = false,
             energy_required = 16,
             allow_productivity = true,
             enabled = false
@@ -383,6 +393,7 @@ if mods["space-age"] then
             results = {
                 {type="item", name="laser", amount=1}
             },
+            auto_recycle = false,
             energy_required = 16,
             allow_productivity = true,
             enabled = false
@@ -421,6 +432,7 @@ if mods["maraxsis"] then
             results = {
                 {type="item", name="laser", amount=1}
             },
+            auto_recycle = false,
             energy_required = 16,
             allow_productivity = true,
             enabled = false
@@ -456,6 +468,7 @@ if mods["Paracelsin"] then
             results = {
                 {type="item", name="laser", amount=1}
             },
+            auto_recycle = false,
             energy_required = 16,
             allow_productivity = true,
             enabled = false
@@ -490,6 +503,7 @@ if mods["castra"] then
             results = {
                 {type="item", name="laser", amount=1}
             },
+            auto_recycle = false,
             energy_required = 16,
             allow_productivity = true,
             enabled = false
@@ -670,7 +684,7 @@ if mods["space-age"] then
     data:extend({
         {
             type = "recipe",
-            name = "custom-weird-alien-gizmo-recycling",
+            name = "weird-alien-gizmo-recycling",
             category = "recycling-or-hand-crafting",
             localised_name = {"recipe-name.recycling", {"item-name.weird-alien-gizmo"}},
             subgroup = "fulgora-processes",
@@ -790,6 +804,7 @@ if data.raw.item["tracker"] then
                 shift = {-8, -8}
             }
             },
+            auto_recycle = false,
             energy_required = 800,
             allow_decomposition = false,
             ingredients = {
@@ -840,6 +855,7 @@ if mods["Paracelsin"] then
             results = {
                 {type="item", name="heat-pipe", amount=1}
             },
+            auto_recycle = false,
             energy_required = 2,
             auto_recycle = false,
             enabled = false
@@ -921,6 +937,7 @@ if mods["space-age"] then
                 {type="item", name="high-density-chaos", amount=1}
             },
             energy_required = 2,
+            auto_recycle = false,
             enabled = false
         },
         {
@@ -938,6 +955,7 @@ if mods["space-age"] then
                 {type="item", name="low-density-structure", amount=1}
             },
             energy_required = 2,
+            auto_recycle = false,
             enabled = false
         },
         {
@@ -954,6 +972,7 @@ if mods["space-age"] then
             },
             force_auto_recycle = true,
             energy_required = 20,
+            auto_recycle = false,
             enabled = false
         },
         {
@@ -967,6 +986,7 @@ if mods["space-age"] then
                 {type="item", name="weighted-blanket", amount=1}
             },
             energy_required = 2,
+            auto_recycle = false,
             enabled = false
         },
         {
@@ -984,6 +1004,7 @@ if mods["space-age"] then
                 {type="item", name="lightning-rod", amount=1}
             },
             energy_required = 2,
+            auto_recycle = false,
             enabled = false
         },
         {
@@ -997,6 +1018,7 @@ if mods["space-age"] then
                 {type="item", name="ordinary-human-brain", amount=1}
             },
             energy_required = 2,
+            auto_recycle = false,
             enabled = false
         },
         {
@@ -1014,6 +1036,7 @@ if mods["space-age"] then
                 {type="item", name="weird-alien-gizmo", amount=1}
             },
             energy_required = 2,
+            auto_recycle = false,
             enabled = false
         },
         {
@@ -1069,6 +1092,7 @@ if mods["space-age"] then
                 show_amount_in_title = false,
                 maximum_productivity = 0,
                 energy_required = 3,
+                auto_recycle = false,
                 enabled = false
             },
             {
@@ -1087,6 +1111,7 @@ if mods["space-age"] then
                 },
                 maximum_productivity = 0,
                 energy_required = 5,
+                auto_recycle = false,
                 enabled = false
             },
             {
@@ -1100,6 +1125,7 @@ if mods["space-age"] then
                     {type="item", name="art-rotators", amount=1}
                 },
                 energy_required = 2,
+                auto_recycle = false,
                 enabled = false
             },
             {
@@ -1117,6 +1143,7 @@ if mods["space-age"] then
                     {type="item", name="stem-cells", amount=1}
                 },
                 energy_required = 2,
+                auto_recycle = false,
                 enabled = false
             },
             {
@@ -1133,6 +1160,7 @@ if mods["space-age"] then
                 },
                 force_auto_recycle = true,
                 energy_required = 20,
+                auto_recycle = false,
                 enabled = false
             }
         })
@@ -1149,6 +1177,7 @@ if mods["space-age"] then
                     {type="item", name="pentapod-gatekeeper", amount=1}
                 },
                 energy_required = 2,
+                auto_recycle = false,
                 enabled = false
             },
             {
@@ -1166,6 +1195,7 @@ if mods["space-age"] then
                     {type="item", name="pentapod-egg", amount=1}
                 },
                 energy_required = 2,
+                auto_recycle = false,
                 enabled = false
             },
             {
@@ -1182,6 +1212,7 @@ if mods["space-age"] then
                 },
                 force_auto_recycle = true,
                 energy_required = 20,
+                auto_recycle = false,
                 enabled = false
             }
         })
@@ -1200,6 +1231,7 @@ if mods["space-age"] then
                     {type="item", name="clumsy-piston", amount=1}
                 },
                 energy_required = 2,
+                auto_recycle = false,
                 enabled = false
             },
             {
@@ -1217,6 +1249,7 @@ if mods["space-age"] then
                     {type="item", name="flywheel", amount=1}
                 },
                 energy_required = 2,
+                auto_recycle = false,
                 enabled = false
             }
         })
@@ -1243,6 +1276,7 @@ if mods["space-age"] then
                 energy_required = 20,
                 preserve_products_in_machine_output = true,
                 allow_productivity = true,
+                auto_recycle = false,
                 enabled = false
             }
         })

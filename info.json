@@ -7,5 +7,5 @@
   "source": "https://github.com/ManaFriendsmith/LasingAroundMk2",
   "description": "More Materials: Helium and lasers.",
   "factorio_version": "2.0",
-  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacksMk2", "? IfNickelMk2", "? ThemTharHillsMk2", "? BrimStuffMk2", "? Paracelsin", "? castra", "? LunarLandings"]
+  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "? BrassTacksMk2", "? IfNickelMk2", "? ThemTharHillsMk2", "? BrimStuffMk2", "? Paracelsin", "? castra", "? LunarLandings"]
 }

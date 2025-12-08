@@ -193,7 +193,7 @@ if mods["space-age"] then
               },
             subgroup = "fulgora-processes",
             order = "a[scrap]-b",
-            canonical_recipe = false,
+            auto_recycle = false,
             inventory_move_sound = item_sounds.rocket_control_inventory_move,
             pick_sound = item_sounds.rocket_control_inventory_pickup,
             drop_sound = item_sounds.rocket_control_inventory_move,
@@ -393,7 +393,6 @@ if mods["space-age"] then
             }
           },
           subgroup = "inversion",
-          canonical_recipe = "dormant-newtronic-chip",
           order = "i2",
           inventory_move_sound = item_sounds.module_inventory_move,
           pick_sound = item_sounds.module_inventory_pickup,
