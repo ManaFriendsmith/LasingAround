@@ -393,6 +393,7 @@ if mods["space-age"] then
             }
           },
           subgroup = "inversion",
+          canonical_recipe = "dormant-newtronic-chip",
           order = "i2",
           inventory_move_sound = item_sounds.module_inventory_move,
           pick_sound = item_sounds.module_inventory_pickup,
