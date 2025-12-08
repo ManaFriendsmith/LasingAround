@@ -678,7 +678,8 @@ if mods["space-age"] then
             icons = {
                 {
                     icon = "__quality__/graphics/icons/recycling.png",
-                    icon_size = 64
+                    icon_size = 64,
+                    scale = 0.75
                   },
                   {
                     icon = "__LasingAroundMk2__/graphics/icons/weird-alien-gizmo.png",
@@ -686,7 +687,8 @@ if mods["space-age"] then
                   },
                   {
                     icon = "__quality__/graphics/icons/recycling-top.png",
-                    icon_size = 64
+                    icon_size = 64,
+                    scale = 0.75
                   }
             },
             ingredients = {
