@@ -1,3 +1,7 @@
+if global_laser_mill_done then
+  return
+end
+
 local rm = require("__pf-functions__/recipe-manipulation")
 local tm = require("__pf-functions__/technology-manipulation")
 local misc = require("__pf-functions__/misc")
@@ -441,3 +445,5 @@ for name, helium in pairs(new_recipes_helium) do
 end
 
 log(serpent.block(canonical_item_costs))
+
+global_laser_mill_done = true

@@ -1,6 +1,6 @@
 ## The helium cost of some recipe in the laser mill is way too high or low. ##
 
-By default, all of the helium costs of laser mill recipes are automatically calculated based on the same "canonical recipes" system used by Recycler Final Final. The idea is to have the helium cost of the recipe proportional to the cost of the item. However, some unusual recipes can result in strange values because any system built to estimate the total cost of any arbitrary recipe has no idea what any given item "means." (For example, if you've ever played with the recipe randomizer mod, it often makes uranium fuel rods cost several thousand iron, because it's evaluating the cost of one U235 as the number of uranium ore needed to output one on average, without enrichment.)
+By default, all of the helium costs of laser mill recipes are automatically calculated based on their recipes. However, some unusual recipes can result in strange values because any system built to estimate the total cost of any arbitrary recipe has no idea what any given item "means." (For example, if you've ever played with the recipe randomizer mod, it often makes uranium fuel rods cost several thousand iron, because it's evaluating the cost of one U235 as the number of uranium ore needed to output one on average, without enrichment.)
 
 Any item or fluid with a canonical_cost defined in its prototype will use that cost. Most ores and plates have a cost of 1 and most fluids have a cost of 0.1.
 
@@ -50,3 +50,15 @@ An exception is if you have Icon Badges installed, and the recipe already has an
 The recipes will all be generated or converted in data-final-fixes. The reason for this system is it allows modpacks like BZ to modify a base recipe potentially many times and then for the laser mill version of the recipe to inherit all those changes, without every mod having to explicitly mess with both versions of the recipe.
 
 If you want to create laser mill usable recipes manually instead of using this system, it can craft recipes of the categories "laser-milling" (unique to the laser mill, used for helium-added variants of normal recipes), "laser-assembling" (shared with assembling machines, unused by default), or "laser-milling-exclusive" (used for recipes converted to require the laser mill, shared with the K2 advanced assembler if the setting is enabled.)
+
+## I'm a mod maker and want laser mill recipes to be generated at a different point in the load order. ##
+
+OK. I hope you know what you're doing.
+
+Theoretically you can `require("__LasingAroundMk2__/lasermill-recipe-generator")` and it will do the thing you want it to.
+
+There are two global variables to control when and whether recipes are generated.
+
+global_laser_mill_done: This is set to true once the recipe generator has done its thing. If it's set to anything, requiring the file again won't generate new recipes. Of course, you can set it back to nil yourself.
+
+global_laser_mill_reserved: Directly requiring the file does not care about this. However, LasingAround will not run the recipe generator if this variable is set to anything, instead printing a message to the log. It's up to you run the generator at a different point.
