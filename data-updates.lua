@@ -22,6 +22,19 @@ if mods["quality"] then
         data:extend({pulse_recycling})
         data.raw.item["pulsing-newtronic-chip"].auto_recycle = false
     end
+
+    local biggest_result_list = data.raw.furnace.recycler.result_inventory_size
+    for k, v in pairs(data.raw.recipe) do
+      if v.type == "recycling" or v.type == "recycling-or-hand-crafting" then
+        if v.results and #v.results > biggest_result_list then
+          biggest_result_list = #v.results
+        end
+      end
+    end
+    data.raw.furnace.recycler.result_inventory_size = biggest_result_list
+    if mods["Age-of-Production"] then
+        data.raw.furnace["aop-salvager"].result_inventory_size = biggest_result_list
+    end
 end
 
 if mods["scrap-industry"] then
